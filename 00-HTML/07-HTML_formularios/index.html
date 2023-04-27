@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/00-HTML/05-HTML_media/assets/yo_2.jpg">
+    <title>Formularios</title>
+  </head>
+
+  <body>
+    <h1>Formilarios HTML</h1>
+    <!-- Etiqueta padre "form" -->
+    <form>
+
+      <!-- Los inptus y los label los englobamos en un div -->
+
+      <!-- *Input de tipo texto-->
+      <div>
+        <!-- Los inputs sirven para poder tener interactividad con el usuario (por ej. el pedir usuario y contraseña)  -->
+        <!-- Para darle nombre a un input usamos la etiqueta "label" -->
+        <!--Asociamos el "label" con el input mediante el for en label y el id en input-->
+        <label for="nombre">Nombre:</label>
+        <!--id para asociar el input con el label (*obligatorio), type para decir de que tipo es (*obligatorio), placeholder para que aparezca un mensaje dentro de la caja antes de escrbir, name sirve para identificar este input con el parametro "nombre" y asociar lo que escribas en la caja al parametro "nombre" (*obligatorio)... required para obligarte a escribir algo antes de darle a enviar, minlength sirve para asignar un minimo de caracteres y maxlength sirve para asignar un máximo de caracteres, disabled sirve para no dejarte escribir -->
+        <input
+          id="nombre"
+          type="text"
+          placeholder="Pon tu nombre"
+          name="nombre"
+          required 
+          minlength="2"
+          maxlength="7"
+          disabled
+        >
+      </div>
+
+      <!--*input de tipo email -->
+      <div>
+        <!-- Lo usamos para que en el contenido te obligue a usar un @ -->
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+      </div>
+
+      <!--*input para contraseñas -->
+      <div>
+        <label for="pass">Contraseña</label>
+        <input type="password" name="pass" id="pass">
+      </div>
+
+      <!--*input de tipo URL -->
+      <div>
+        <!-- Te obliga que el contenido tenga un https:// -->
+        <label for="web">Página web</label>
+        <input type="url" name="web" id="web">
+      </div>
+
+      <!--*input de tipo file -->
+      <!--!Si usamos un inpu de tipo file tendremos que añadir en la etiqueta form el atributo enctype="multiport/form-data"-->
+      <div>
+        <!--para subir imagenes -->
+        <label for="foto">Sube una imagen</label>
+        <input type="file" name="foto" id="foto">
+      </div>
+
+
+      <h2>¿Qué lenguaje te gusta más?</h2>
+      <!--*Input de checkbox -> se pueden marcar y desmarcar sin importar los demás checkbox-->
+      <div>
+        <label for="js">Javascript</label>
+        <input type="checkbox" name="js"  id="js">
+      </div>
+        <div>
+          <label for="html">HTML</label>
+          <input type="checkbox" name="html"  id="html">
+        </div>
+        <div>
+          <label for="css">CSS</label>
+          <input type="checkbox" name="css"  id="css">
+        </div>
+      </div>
+
+
+      <h2>Género:</h2>
+      <!--*Input de radio -> solo se puede marcar y desmarcar uno de ellos, SIEMPRE Y CUANDO EN EL NAME DEL INPUT TENGAN TODOS EL MISMO NOMBRE-->
+      <div>
+        <input type="radio" id="male" name="genero">
+        <label for="male">Masculino</label>
+      </div>
+      <div>
+        <input type="radio" id="female" name="genero">
+        <label for="female">Femenino</label>
+      </div>
+      <div>
+        <input type="radio" id="binario" name="genero">
+        <label for="binario">No binario</label>
+      </div>
+
+      <!--*input color -> Para elegir un color -->
+      <div>
+        <label for="colores">Elige un color</label>
+        <input type="color" name="colores" id="colores">
+      </div>
+
+      <!--*input date -> Para elegir una fecha -->
+      <div>
+        <label for="fecha">¿Cúando es tu cumpleaños?:</label>
+        <input type="date" name="fecha" id="fecha">
+      </div>
+
+      <!--*input range -> Para elegir un rango -->
+      <div>
+        <label for="rango">Valora cuanto te ha gustado:</label>
+        <input type="range" name="rango" id="rango" min="0" max="10" step="1">
+      </div>
+
+
+      <h2>Elige tu destino</h2>
+      <!--*select -> para el típico desplegable -->
+      <label for="viaje">¿Dónde quieres viajar?:</label>
+      <select name="viaje" id="viaje">
+        <option value="">Selecciona una opción...</option>
+        <option value="paris">París</option>
+        <option value="londres">Londres</option>
+        <option value="madrid">Madrid</option>
+        <option value="malaga">Málaga</option>
+      </select>
+
+      <h2>Para mensajes de texto</h2>
+      <!--*textarea ->para escribir un texto -->
+      <label for="mensaje">Mensaje</label>
+      <!-- cols y rows para decir el tamaño del cuadro de mensaje -->
+      <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+
+      <br><br>
+      <!--*fieldest para englobar lo que metas en una caja y legend para el titulo de la caja-->
+      <fieldset>
+        <legend>Título</legend>
+        <div>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre">
+        </div>
+        <br>
+        <div>
+          <label for="apellido1">Apellido1</label>
+          <input type="text" id="apellido1" name="apellido1">
+        </div>
+        <br>
+        <div>
+          <label for="apellido2">Apellido2</label>
+          <input type="text" id="apellido2" name="apellido2">
+        </div>
+      </fieldset>
+
+      <br>
+
+
+
+
+      <!--*Para botones-->
+      <div>
+        <!-- El profesor recomienda usar buttons en lugar de inputs -->
+        <!-- A la hora de crear un boton que nos sirva par interactuar podemos hacerlo mediante otra etiqueta input tipo submit o mediante una etiqueta button -->
+        <input type="submit" value="Aqui ponemos el nombre del boton">
+        <!-- ó -->
+        <!--En otra circustancia el butttoo NO nos serviriá para interactuar con él...es decir, que hicera algo al clikar sobre él...pero al estar dentro de un formulario (form) sí nos permite que haya interactividad-->
+        <button type="submit">Enviar formulario</button>
+
+        <br>
+
+        <!-- Para borrar o resetear un formulario(es decir, todo el contenido e inputs que tenga dicho formulario) podemos usar un input de tipo reset o un butto de tipo reset tmb -->
+        <input type="reset">
+        <button type="reset">Resetear formulario</button>
+      </div>
+
+    </form>
+  </body>
+</html>

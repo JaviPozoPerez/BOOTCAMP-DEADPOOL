@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Para iconos en la pestaña-->
+    <link rel="icon" href="./assets/apple-touch-icon.png">
+    <title>Archivos multimedia</title>
+  </head>
+
+  <body>
+    <h1>Utilizar archivos multimedia en HTML</h1>
+    <h2>Imágenes</h2>
+
+    <!--Usamos la etiquet <img src="" alt="" width=""> (que es huérfana) para subir imagenes, src para añadir la ruta de el archivo, alt para añadir un comentario (que saldrá en caso de error en imagen) y widht (opcional) para ajustar tamaño y calidad..ejemplo: width = "200px" ó widht = "50%"-->
+    <img src="./assets/yo_1.jpg" alt="Foto de javi pozo en boda" width="200px">
+    <img src="./assets/yo_2.jpg" alt="Foto de javi pozo en Mijas" width="150px">
+
+    <!--Para relacionar un texto al pie de la fotografia con la fotografia usamos la etiqueta <figure></figure> y dentro de ella el texto dentro de la etiqueta <figcaption></figcaption>-->
+    <figure>
+      <img src="./assets/yo_1.jpg" alt="Foto de javi pozo en boda" width="200px">
+      <figcaption>Foto de javi en boda de V&R</figcaption>
+    </figure>
+
+    <h2>Videos</h2>
+    <!--Usamos la etiquet <video> para los videos al igual que <img> para imagenes, la diferencia es que añadimos "controls" par que aparezc la opcion de play en video, o "autoplay" para que el video esté en continua visualizacion, o "controls autoplay" para que sea una continua visualizacion pero con opcion a play-->
+    <video src="./assets/guitarra.mp4" width="400px" controls autoplay></video>
+
+    <!--En el caso de que dispngamos distinas extensiones de un video podemos ponerlas todas con la etiqueta <source> y el navegador eligirá la que pueda leer, si alguna no es capaz de mostrarla la saltará, probando con la siguiente-->
+    <!--!En este caso leerá el segundo source, puesto que es el único que existe en nuestro directorio-->
+    <figure>
+      <video width="300px" controls>
+        <source src="./assets/guitarra.jpg">
+        <source src="./assets/guitarra.mp4">
+        <source src="./assets/guitarra.ogg">
+      </video>
+      <figcaption>Video tocando guitarra</figcaption>
+    </figure>
+
+    <!--Lo mismo para audio-->
+    <h2>Audio</h2>
+    <audio src="assets/guitarra.mp4" controls></audio>
+
+    <figure>
+      <audio  controls>
+        <source src="./assets/guitarra.jpg">
+        <source src="./assets/guitarra.mp4">
+        <source src="./assets/guitarra.ogg">
+      </audio>
+      <figcaption>Audio tocando guitarra</figcaption>
+    </figure>
+     
+    
+    <!--iframe para ver paginas web o videos(sobre todo para videos) en una caja dentro de tu web-->
+    <h2>iframe</h2>
+
+    <h3>iframe para web</h3>
+    <!--Ejemplo pagina web-->
+    <iframe src="https://as.com" width="500px"></iframe>
+
+    <!--ejemolo video de youtube: para este caso tendrás que ir al video de youtube que quieres compartir, darle a la opcion de compartir y al icono de "<>", tras esto te saldrá un iframe para copiar aquí en tu codgo-->
+    <h3>iframe para video de youtube</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/gwgk9Q9l0aE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <!--Para insertar un mapa de googlemaps-->
+    <h3>iframe para maps</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51140.05769413079!2d-4.447224335116262!3d36.76448310861319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f62290250f0f%3A0x750e4a54837ac4e6!2zQ2RhZC4gSmFyZMOtbiwgTcOhbGFnYQ!5e0!3m2!1ses!2ses!4v1678463354752!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <h3>iframe para Podcasts</h3>
+    <iframe id="audio_58600337" style="width: 100%;" src="https://www.ivoox.com/player_ej_58600337_6_1.html" height="200" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>
+
+  </body>
+</html>
+
+

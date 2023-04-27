@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Para poner un icono en la pestaña web-->
+  <link rel="icon" href="../05-HTML_media/assets/apple-touch-icon.png">
+  <title>Tablas</title>
+</head>
+
+<body>
+  <h1>Tablas HTML</h1>
+
+  <h2>Tabla básica</h2>
+  <!--La etiqueta table engloba el resto de etiquetas de tablas, si le añadimos el parámetro "border" incluimos un recuadro-->
+  <table border="1px">
+    <!--Para un título de pr la tabla usamos <caption>-->
+    <caption>Titulo de tabla</caption>
+    <!--Para cada filas que queramos usamos la etiqueta <tr></tr>-->
+    <tr>
+      <!--Por cada columna usamos la etiqueta <td></td> dentro de las filas-->
+      <!--Cuando las celdas las queremos usar como titulos usamos <th scope ="col"> en caso de titulo de columna ó <th scope ="row" en caso de titulo de filas.... en lugar de <td>-->
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+    </tr>
+
+    <tr>
+      <td>Javi</td>
+      <td>Pozo</td>
+    </tr>
+
+    <tr>
+      <td>Ana</td>
+      <td>Julia</td>
+    </tr>
+  </table>
+
+  <h2>Tabla con combinacion de celdas</h2>
+  <table border="1px">
+
+    <tr>
+      <td>Celda 1</td>
+      <!--Para que una celda ocupe x columnas usamos "colspan = "x"-->
+      <td colspan="2">Celda 2</td>
+    </tr>
+    <tr>
+      <!--Para combinar filas usamos "rowspan = "x"-->
+      <td rowspan="2">Celda 4</td>
+      <td>Celda 5</td>
+      <td>Celda 6</td>
+    </tr>
+    <tr>
+      <td>Celda 7</td>
+      <td>Celda 8</td>
+    </tr>
+  </table>
+
+  <h2>Tablas con etiquetas semánticas (thead, tbody, tfoot)</h2>
+  <table border="1px">
+    
+    <caption>Personas y sus perros</caption>
+    <!--usamos thead para los titulos de la tabla (su cabecera)-->
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Nº de perros</th>
+      </tr>
+    </thead>
+    
+    <!--usamos tbody para las celdas que forman el cuerpo de la tabla-->
+    <tbody>
+      <tr>
+        <td>Javi</td>
+        <td>Pozo</td>
+        <td>1</td>
+      </tr>
+  
+      <tr>
+        <td>Ana</td>
+        <td>Julia</td>
+        <td>3</td>  
+      </tr>
+    </tbody>
+    
+    <!--usamos tfoot para el pie de la tabla-->
+    <tfoot>
+      <tr>
+        <th colspan ="2" scope="row">TOTAL</td>
+        <td>4</td>
+      </tr>
+    </tfoot>
+    
+  </table>
+
+</body>
+</html>

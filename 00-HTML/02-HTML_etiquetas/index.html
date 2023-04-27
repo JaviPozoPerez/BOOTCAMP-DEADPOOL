@@ -1,0 +1,159 @@
+<!-- Esta etiquet sirve par decir al navegador que vamos a usar HTML 5 -->
+<!DOCTYPE html> 
+
+<!-- La etiqueta html es la etiqueta raiz y engloba todo el documento de tu pagina -->
+<html> 
+
+<!-- La etiquet head guardará toda la información que no se verá en pantalla (etiquetas descriptivas, importacion de archivos css..) -->
+<head>  
+  <!-- La etiqueta meta, acompañada de ciertos atributos como "charset" o "name"  -->
+   <!-- El atributo charset="UTF-8" es para hacer validos todo tipo de simbolos a la hora de verlos visualmente en el navegador -->
+    <meta charset="UTF-8">
+    <!--Esta linea se usa para que la visalizacion de codigo en el navegador sea a escala indiferentemente de la pantalla del dispositivo donde se esté viendo  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulo de la pestaña de la web -->
+    <title>Primeras etiquetas con HTML</title>
+    
+</head>
+
+<!-- en el body irá el codigo que se verá traducido luego en la pagina web -->
+<body>  
+  <!-- Etiquetas para titulos y textos -->
+
+  <!-- Titulos jerarquizados hi, h2, h3, h4, h5 y h6 -->
+  <!-- Titulo principal h1 -->
+  <h1>Selecciones de futbol</h1>
+  <!-- Parrafo correspondiente a h1 -->
+  <p>En el mundial hay 20 selecciones nacionales</p>
+
+  <!-- dentro de h1 podemos hablar de las equipaciones de los equipos, eso sería jerarquimanete hablando un h2 -->
+  <h2>Equipaciones de futbol</h2>
+  <p>Cada equipo tiene una equipacion distinta</p>
+
+  <!-- Dentro de las euipaciones de futbol podemos hablar de colores y formas como h3 -->
+  <h3>Colores de las equipaciones</h3>
+  <p>Rojas, negras, blances, verdes..tc</p>
+  <h3>Formas de las equipaciones</h3>
+  <p>De mangas cortas, mangas largas..etc</p>
+
+  <!-- Dentro del h1 (selecciones de futbol) podemos hablar de jugadores de esas selecciones, por lo que volveria a ser un titulo h2 -->
+  <h2>Jugadores de futbol</h2>
+  <p>Neymar, Mbappe, Pedri...
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum blanditiis veritatis autem. Totam eligendi sed labore quia nemo corrupti possimus, tempore aspernatur debitis, voluptate quas facere dignissimos sit molestiae quos!
+  </p>
+
+
+
+  <!-- Las etiquetas por defecto se comportn de dos formas -->
+
+  <!-- En modo "block" o bloque, que siempre ocupan el ancho entero (la caja entera) -->
+  <div>Esto es un div</div>
+  <div>Y esto es otro div que como ves se escribe debajo del anterior</div>
+
+  <!-- O bien tamb se comportan en modo "inline"  o línea. Solo ocupan el ancho de su contenido, por o que pueden estar una al lado de otra-->
+  <span>Esto es una span</span>
+  <span>Y esto es otro span que se pondrá al lado del anterior porque no ocupa el bloque entero </span>
+
+
+
+  <!-- Para indicar que una parte del texto es más importante que otra usamos la etiqueta "strong", la etiqueta "em" o la etiqueta "u" -->
+  <p>En este texto señalamos lo <strong>
+     MAS IMPORTANTE</strong> usando la etiqueta strong</p>
+  <p>En este caso estamos <em>dando importancia</em> de esta forma usando "em"</p>
+  <p>En este párrafo damos <u>importancia</u> con la etiqueta "u"</p>
+
+  <!-- Para marcar un texto en negrita sin llegar  darle más imporancia respecto a codigo, usmos la etiqueta "b" -->
+  <p>En este texo <b>esto</b> aparecerá en negrita</p>
+  <!-- Para que aprezc un texo en cursiva pero sin dar importancia usamos "i"-->
+  <p>En este caso <i>esto que estas leyendo apaarecerá en cursiva</i></p>
+  <!-- Tmb podemo tachar el texto usando la etiqueta "del" -->
+  <p>Voy a <del>tachar</del> usando la etiqueta del</p>
+
+  <!-- Podemos subrayar usando la etiqueta "mark" -->
+  <p>Subrayamos usando <mark>la etiqueta mark</mark></p>
+
+  <!-- Para usar exponentes la etiquera "sup" -->
+  <p>x<sup>2</sup></p>
+  <!-- Par hacer subindices "sub" -->
+  <p>log<sub>2</sub> y H<sub>2</sub>O</p>
+
+
+  <!-- Para nombrar una parte de codigo o texto codigo usamos la etiqueta "code" -->
+  <p>El atributo para decirle un juego de caracteres al navegador es <code>charset="UTF-8"</code></p>
+
+
+
+
+  <!--Para hacer listas-->
+  <h2>Listas</h2>
+
+  <!--Para envolver una lista desordenada usamos "<ul>"-->
+    <h3>Lista desordenada</h3>
+    <ul>  
+      <!--Para comenzar a listar usamos "<li>"-->
+      <li>Cadiz</li>
+      <li>Malaga</li>
+      <!--Para anidar listas solo tenemos que repetir pasos dentro del <li> que queremos anidar-->
+      <li>Madrid
+        <ul>
+          <li>Vallecas</li>
+          <li>Centro</li>
+          <li>Barajas</li>
+        </ul>
+      </li>
+      <li>Sevilla</li>
+    </ul>
+
+  <!--Para listas ordenadas usamos "<ol>"-->
+    <h3>Lista ordenada</h3>
+    <ol>
+      <li>Paso 1</li>
+      <li>Paso 2</li>
+      <li>Paso 3</li>
+    </ol>
+
+<!--Para separar dos temas distintos mediante una barra-->
+<hr>
+
+<h2>Citas</h2>
+    <h3>Citas en bloque</h3>
+    <blockquote>
+      "Yo meto los goles de falta por la escuadra". <cite>Leandro Bolorino</cite>
+    </blockquote>
+
+    <h3>Citas en linea</h3>
+    <p>Leandro en la sagrada familia dijo: <q>meto los goles de falta por la escuadra</q></p>
+
+<!--!--------------------------------------------------------->
+<!--Para salto de lineas uso la etiqueta <br>-->
+<p>Voy a saltar de esta linea<br>a esta otra jojojojo</p>
+
+<!--Etiqueta <pre> para respetar en el navegador fielmente lo que hayas escrito en codigo (Espacios, salto de líneas etc)-->
+<pre>
+  <code>
+    int main(a, b){
+      a = b+1;
+      return a;
+    } 
+  </code>            .
+</pre>
+
+<!--en el caso de que el lenguaje codigo sea HTML, para evitar que el navegador lo interprete
+como código y lo saque tal cual lo escribimos aquí...debemos sustituir el caracter "<" por su código correspondiente 
+(buscandolo previamente en internet)-->
+<h3>Ejemplo de un meta charset</h3>
+<pre>
+  <code>
+    <meta charset="UTF-8">
+    &lt;meta charset ="UTF-8">
+  </code>
+</pre>
+
+<!--Etiqueta button, para crear un boton visualmente en el navegador-->
+<button>Haz click aquí</button>
+
+
+</body>
+
+
+</html>

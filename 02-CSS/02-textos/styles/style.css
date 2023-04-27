@@ -1,0 +1,75 @@
+/*?Etilo para textos*/
+/**Tipo de letra, fuente, familia de la fente -> font-family*/
+/*la propiedad font-family permite que escribamos varias fuentes seguidas separadas por coma, para que en el caso de que no encuentre la primera, busque y use la siguiente...*/
+/*Si vas a poner una fuente a mano, cuyo nombre esta compuesto por varias palabras separadas, usa '' para que se identifique como una unica fuente(como has heco con 'Times New Roman')*/
+h1 {
+  font-family: Arial, 'Times New Roman';
+}
+
+/**Tamaño de la letra -> font-size*/
+h1 {
+  font-size: 20px;
+}
+
+/**Grosor o peso de la letra -> font-weight */
+h1 {
+  font-weight: normal;
+  font-weight: bold;
+  font-weight: 500;
+}
+
+/**Una manera de poner en negrita una palabra de cualquier texto, sin usar la etiqueta <strong></strong>, es: en el texto usamos la etique span y le añadimos un class, y aquí modificamos el font-weight de esa clase.*/
+
+.negrita {
+  font-weight: bold;
+}
+
+/**Estilo de letra -> font-style */
+h1 {
+  font-style: italic; /*cursiva*/
+  font-style: normal; /*lo deja normal*/
+}
+
+/**Decoracion de letra -> text-decoration*/
+h2 {
+  text-decoration: none; /*qu eno haya nada*/
+  text-decoration: overline; /*subrayado por encima*/
+  text-decoration: underline; /*subraya por abajo*/
+  text-decoration: line-through; /*tacha la palabra*/
+}
+
+a {
+  text-decoration: none; /*quita el subrayado que viene por defecto en el link de las etiquetas "a"*/
+}
+
+/**Altura de línea -> line-height*/
+.parrafo1 {
+  line-height: 10px;
+  line-height: 1.7;
+}
+
+/**Forzar mayusculas, minusculas, capitalizadas y small-caps -> text- transformation*/
+h2 {
+  text-transform: uppercase; /*la pone en mayus*/
+  text-transform: lowercase; /*la pone en minusculas*/
+  text-transform: capitalize; /*Pone la primera letra de cada palabra en mayusculas*/
+  font-variant: small-caps /*Pone todo en mayusculas, pero la que hayas puesto tú en mayusculas se ve más grande*/;
+}
+
+/**Alineación del texto -> text-align*/
+.left {
+  text-align: left;
+  border: 1px solid red;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+
+/*De esta manera jusificamos el texto de todas las etiquetas p*/
+p {
+  text-align: justify;
+}
+

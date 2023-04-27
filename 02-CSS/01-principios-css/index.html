@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/00-HTML/05-HTML_media/assets/yo_2.jpg">
+
+    <!--Link para asociar el archivo style.css a este index.html-->
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Principios CSS</title>
+
+    <!-- Primer sitio donde podemos escribir CSS aquí en el <head></head> -->
+    <style>
+      h1{
+        color: red;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <h1>Principios de CSS</h1>
+    <!-- Segundo sitio donde podemos escribir CSS, como parámetro dentro de una etiqueta h (NO ES LO MAS RECOMENDADO) -->
+    <h2 style="color: blue;">Color modificado en body</h2>
+
+    <!-- Tercera forma y MAS ADECUADA para usar css...es creando un archivo .css y asociandolo a este .html usando la etiqueta link de manear que hemos hecho en el head de arriba -->
+    <h3>Color cambiado mediante un archivo style.css</h3>
+
+    <p class="texto-tomate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, rerum omnis beatae numquam cum natus unde assumenda culpa? Libero cum unde nostrum quasi temporibus maxime harum, veritatis id corrupti tempore, voluptatem numquam repudiandae?
+    </p>
+
+
+    <h3 id="titulo-3">Esto es un h3 con el id titulo-3</h3>
+    <ul>
+      <li>pepe 1</li>
+      <li class="texto-tomate">pepe 2</li>
+      <li>pepe 3</li>
+      <li>pepe 4</li>
+    </ul>
+
+    <h2>Esto es un h2</h2>
+    <p class="referin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt suscipit, delectus quia quae omnis necessitatibus nulla aliquid porro harum ea veniam repellat provident, rem nemo maiores cumque natus numquam eum ex similique ratione impedit accusantium minima. Delectus tempora nesciunt veritatis, error placeat voluptas ipsa doloribus aperiam, odio iusto praesentium voluptatibus, voluptatem quos reprehenderit! Ipsam, assumenda!</p>
+
+    <h3>Formulario con un titulo h3</h3>
+
+    <div>
+      <h4 id="titulazo" class="titulo-4">Esto e sun h4</h4>
+      <label>Nomre:</label>
+      <input type="text" placeholder="Nombre">
+      
+      <label class="texto-tomate">Email:</label>
+      <input type="email" placeholder="Email">
+    </div>
+
+    <br>
+
+    <table border="1px">
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+      </tr>
+      <tr>
+        <td>Javi</td>
+        <td>Pozo</td>
+      </tr>
+    </table>
+
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/00-HTML/05-HTML_media/assets/yo_2.jpg">
+    <title>Ejercicio Formularios</title>
+  </head>
+
+  <body>
+    <h1>Travel reservation form</h1>
+    <p><b>*denotes mandatory</b></p>
+    <form>
+      <div>
+        <label for="nombre">Full Name*:</label>
+        <br>
+        <input type="text" id="nombre" name="nombre" placeholder="FirstName and LastName" required>
+      </div>
+
+      <br>
+
+      <div>
+        <label for="email">Email address*:</label>
+        <br>
+        <input type="email" id="email" name="email" required placeholder="Email Address">
+      </div>
+
+      <br>
+
+      <div>
+        <label for="package">Choose your package*:</label>
+        <br>
+        <select name="package" id="package" required>
+          <option value="goa">Goa</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+
+      <br>
+
+      <div>
+        <label for="date">Arrival date*:</label>
+        <br>
+        <input type="date" id="date" name="date" required>
+      </div>
+
+      <br>
+
+      <div>
+        <label for="personas">Number of persons*:</label>
+        <br>
+        <input type="numb" id="personas" name="personas" required minlength="1" step="1">
+      </div>
+
+      <br>
+      <p>What would you want to avail?</p>
+      <div>
+        <label for="boarding">Boarding</label>
+        <input type="checkbox" name="boarding" id="boarding">
+      </div>
+      <div>
+        <label for="fooding">Fooding</label>
+        <input type="checkbox" id="fooding" name="fooding">
+      </div>
+      <div>
+         <label for="seeing">Sight Seeing</label>
+         <input type="checkbox" id="seeing" name="seeing">
+      </div>
+
+      <br>
+
+      <div>
+        <label for="descuento">Dicount Coupon code</label>
+        <br>
+        <input type="text" id="descuento" name="descuento" placeholder="UNKNOW_TYPE">
+      </div>
+
+      <br>
+
+      <p>Terms and conditions*</p>
+      <div>
+        <label for="agree">I agree</label>
+        <input type="radio" name="conformidad" id="agree" required>
+        <label for="desagree">I desagree</label>
+        <input type="radio" id="desagree" name="conformidad">
+      </div>
+      <br>
+      <div>
+        <button type="submit">Complete reservation</button>
+      </div>
+    </form>
+  </body>
+</html>

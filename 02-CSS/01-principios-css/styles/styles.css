@@ -1,0 +1,90 @@
+/*Para escribir un comenatario es igual que en C++*/
+/*?De esta manera se escribe de otro color el comentario*/
+/*!O bien de esta forma*/
+
+
+
+
+/*
+  ?REGLAS CSS:
+
+  -Selector -> El selector es todo lo que hay antes de las {}. Podemos tomarlo como si fuera una condicion. "Todo lo que cumpla con este selcetor, tendrá los estilos que ponga en las llaves. Por ejemplo en el caso del h3...todos los h3 del index.html serán de color verde.
+
+  -Llaves -> es decir, {}. Abren el bloque donde van todas las propiedades CSS que trndrá el selector
+
+  -Propiedad -> Cada una de las palabras delate de los dos puntos...color:
+
+  -Dos puntos ->
+
+  -Valor de la propiedad -> Lo que hay a la derecha de los dos puntos
+
+  -Punto y coma -> es OBLIGATIORIO y marca el final.
+
+
+*/
+
+h3 {
+  color: green;
+}
+
+
+/*?Maneras más comnues de llamar a los elementos (selectores más comunes)*/
+    /**1- Llamarlos por su etiqueta*/
+    li {
+      color: orange;
+    }
+
+    /**Por su id, es decir, auqneu sea un h3...si tiene un id que lo idenifique, podremos diferenciarlo del resto de h3 del codigo...lo haremos usando "#" seguido de su nombre identificativo que le hemos puesto en el .html*/
+    /*!No puede haber más de un mismo id llamdo igual en nuestro archivo .html*/
+    #titulo-3 {
+      color: purple;
+    }
+
+    /**Por su class...si añadimos una clase a algún parámetro tamb podemos distinguirlo del resto de parámetros similares, en este caso usando un "."*/
+    /*!En el caso de las clases si se pueden repetir*/
+    .texto-tomate { 
+      color: tomato;
+    }
+
+    /**Podemos hacer que una determinada class que estamos usando en varios tipos de parámetros...como por ejemplo, la class "texto-tomate" (que la tenemos usando en un label, en un p y en un li)... afecte de manera única a un tipo de parámetro(etiqueta) concreto, por ejemplo al parámetro(etiqueta) <p></p> de la siguiente manera*/
+    p.texto-tomate { /*combinamos etiqueta p y un class*/
+      color: yellow;
+    }
+
+/*?NORMAS MUY IMPORTANTES DE CSS*/
+    /**1. El CSS está en CASCADA, eso quiere decir que: todo lo que está más abajo en este archivo .css tiene más imporancia que lo que está arriba...en este ejemplo de abajo predomina el lightcoral*/
+    .referin {
+      color: lightblue;
+      color: lightcoral;
+    }
+
+    /**2. Existe reglas de ESPECIFICIDAD, que nos determinan quien gana a la hora de dar estilos...en este ejemplo de abajo vemos que un id es más relevante que un class, y a la vez vemos que un class es más relevante que la etiquete h4 en sí....lo vemos porque supuestamente gana en relevancia el codigo que está más abajo...pero no es el caso cuando hablamos de que es más relevante...entre estos tres caso el más relevante es id*/
+
+    /*id*/
+    #titulazo {
+      color: red;
+    }
+
+    /*class*/
+    .titulo-4 {
+      color: blue;
+    }
+    
+    /*etiqueta h4*/
+    h4 {
+      color: green;
+    }
+
+    /**Etiquete "!important"...da igual la relevancia de la etiqueta, porque si le pones important al lado del atributo color se convertirá en la más relevante...por ejemplo, la etiqueta h4 es la menos relevante, pero poniendole !important la convertimos en la más relevante
+    
+    /*!etiqueta h4 con un !important*/
+    h4 {
+      /*color: green !important;*/
+    }
+
+
+    /**Podemos poner varios selectores seguidos separados por coma para darte un mismo atributo, ejemplo:*/
+
+    th, td {
+      color: magenta;
+    }
