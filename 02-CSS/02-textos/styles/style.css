@@ -3,8 +3,16 @@
 /*la propiedad font-family permite que escribamos varias fuentes seguidas separadas por coma, para que en el caso de que no encuentre la primera, busque y use la siguiente...*/
 /*Si vas a poner una fuente a mano, cuyo nombre esta compuesto por varias palabras separadas, usa '' para que se identifique como una unica fuente(como has heco con 'Times New Roman')*/
 h1 {
-  font-family: Arial, 'Times New Roman';
+  font-family: 'Arial', 'Times New Roman';
 }
+
+/*!Si quiero que TODA mi página web tenga el mismo de letra (salvo que haya especificado algo distinto en alguna etiqueta) especificaremos que todo el body tenga una misma fuente 
+
+  body {
+    font-family: 'Montserrat';
+  }
+
+*/
 
 /**Tamaño de la letra -> font-size*/
 h1 {
@@ -101,11 +109,41 @@ p {
 }
 
 /**2. Descargando la fuente como archivo desde Google Font y cargandola desde aquí con @font-face*/
+/**@font-face es para crear una fuente descargada*/
+@font-face {
+  font-family: 'Courier Prime'; /*Este nombre puedes poner lo que quieras, estamos creando la fuente*/
+  src: url(../assets/fonts/CourierPrime-Regular.ttf);
+  font-weight: 400;
+}
+
+/**Para usar otra fuente descargada de la misma familia (solo que en negrita como en este caso) hay que crear otro @font-face PEEEROO sin cambiar el nombre de la familia, puesto que es la misma, solo modificamos su correspondiente carasteristica con respecto al otro @font-face (que en este caso es el grosor, font-weight*/
 @font-face {
   font-family: 'Courier Prime'; /*Este nombre puedes poner lo que quieras, estamos creando la fuente*/
   src: url(../assets/fonts/CourierPrime-Bold.ttf);
+  font-weight: 700;
 }
 
+/**Creamos la cursiva de esta familia, que tambien hemos descargado*/
+@font-face {
+  font-family: 'Courier Prime';
+  src: url(../assets/fonts/CourierPrime-Italic.ttf);
+  font-weight: 400;
+  font-style: italic;
+}
+
+/*Aquí de esta manera estariamos usando el archivo "Regular"*/
 .left{
   font-family: 'Courier Prime';
+  font-weight: 400;
+}
+/*En este caso estamos usando el archivo "Bold"*/
+.right{
+  font-family: 'Courier Prime';
+  font-weight: 700;
+}
+/*Y en este caso el archivo "Italic"*/
+.center{
+  font-family: 'Courier Prime';
+  font-weight: 400;
+  font-style: italic;
 }
