@@ -30,6 +30,11 @@ h1 {
   font-style: normal; /*lo deja normal*/
 }
 
+/**Espacio entre letras --> letter-spacing*/
+blockquote {
+  letter-spacing: 2px;
+}
+
 /**Decoracion de letra -> text-decoration*/
 h2 {
   text-decoration: none; /*qu eno haya nada*/
@@ -73,3 +78,34 @@ p {
   text-align: justify;
 }
 
+
+/*?RESUMEN*/
+.ultimo-p {
+  font-family: 'Roboto', sans-serif; /*si no encunetra la fuente Roboto pone cualquier fuente del estilo sans-serif*/
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 25px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: justify;
+  letter-spacing: 2px;
+}
+
+/*?Añadir fuentes externas a mi web*/
+/**En la web de Google Fonts*/
+
+/**1. Previamnete escribimos el link de la fuente obtenida desde Google Font en el head del .html...y para implementar la fuente añadida a la web hacemos esto:*/
+.ultimo-p {
+  font-family: 'Mali';
+}
+
+/**2. Descargando la fuente como archivo desde Google Font y cargandola desde aquí con @font-face*/
+@font-face {
+  font-family: 'Courier Prime'; /*Este nombre puedes poner lo que quieras, estamos creando la fuente*/
+  src: url(../assets/fonts/CourierPrime-Bold.ttf);
+}
+
+.left{
+  font-family: 'Courier Prime';
+}
