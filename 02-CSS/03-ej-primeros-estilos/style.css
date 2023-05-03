@@ -1,1 +1,58 @@
 /*?CSS del ejercicio 03-ej-primeros-estilos (archivo index.html)*/
+/**Ponemos por defecto en toda la web la fuente descargada "Playfair Display"*/
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+/**Centramos titulos, es decir, las etiquetas h1, h2, h3*/
+/**Titulos en mayus automaticamente*/
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+/**Titulos de noticias*/
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+
+}
+/**los h3 son las fechas por lo que les ponemos ancho de fuente 600*/
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/**tambien podriamos centraar titulos usando una class center en cada h1, h2, h3 del inde.html y definiendo así la clase center:
+
+.center {
+  text-align: center;
+}
+*/
+
+
+/**Fechas de color tomato*/
+.tomato {
+  color: tomato;
+}
+
+/**Etiquetas strong con tamaño 24px*/
+strong {
+  font-size: 24px;
+}
+
+/**Para el nombre de Mariano rajoy ponerlo en verde*/
+.verde{
+  color: green;
+}
+
+/**Toodos los párrafos con una altura de texto de 20px*/
+p {
+  line-height: 20px;
+} 
+
+/**Partes de los parrafos en rgb*/
+.rgb {
+  color: rgb(255, 255, 0);
+}
