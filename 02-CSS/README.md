@@ -2,6 +2,7 @@
 
 ## Recursos
 
+* [Fuentes de Google](https://fonts.google.com/)
 * [Paletas de colores](https://coolors.co/)
 * [Colores oficiales de marcas](https://brandcolors.net/)
 * [Fondos vectoriales](https://www.svgbackgrounds.com/)

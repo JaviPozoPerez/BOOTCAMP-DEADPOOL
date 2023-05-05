@@ -31,9 +31,15 @@ h3 {
 }
 */
 
+/**o tambien podriamos haber hecho esto:
+
+h1, h2, h3 {
+  text-align: center;
+}
+*/
 
 /**Fechas de color tomato*/
-.tomato {
+h3.tomato { /*!Aquí el h3 es innecesario, si se pone es con la intencion de matiar más aun que los que tienen la clase "tomato" son solo los h3 en este caso*/
   color: tomato;
 }
 
