@@ -1,0 +1,8 @@
+.fondo-color {
+  /*Colorea la caja entera del parrafo que define dicha clase*/
+  background-color: indigo;
+}
+
+.fondo-imagen {
+  background-image: url();
+}
