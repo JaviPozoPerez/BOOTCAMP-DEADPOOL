@@ -1,0 +1,33 @@
+.color-nombre {
+  color: tomato;
+}
+
+.color-rgb {
+  /*Los numeros van del 0 al 255*/
+  color: rgb(25, 0, 137);
+}
+
+.color-rgba {
+  /*el cuarto número, alpha, es para transparencias*/
+  color: rgba(255, 0, 0, 1);
+  /* Lo mismo da que da lo mismo */
+  color: rgba(255 0 0 / 0.5);
+}
+
+.color-hex {
+  /*Los dos primeros digitos se refieren al rojo, lo dos de en medio al verde, los dos finales al azul..FF el numero mas frande, y el 00 más pequeño*/
+  color: #A0FF98;
+}
+
+.color-hex-trans {
+  /*Lo mismo solo que añadiendole otro numero al fnal para indicar transparencia*/
+  color: #00FF00FF;
+}
+
+.color-hsl {
+  color: hsl(229, 82%, 26%)
+}
+
+.color-hsla {
+  color: hsla(0, 82%, 26%, 0.952)
+}
