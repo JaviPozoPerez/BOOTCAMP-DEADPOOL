@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/00-HTML/05-HTML_media/assets/yo_2.jpg">
+    <!-- Para enlazar el archivo css con este html -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Modelo de caja (Box model)</title>
+  </head>
+
+  <body>
+    <h1>Modelo de caja (Box model)</h1>
+    <!-- Displays basicos -->
+    <details>
+      <summary>Displays más básicos</summary>
+      <h3><code>Display: inline</code></h3>
+      <p class="fondo-rosa">Párrafo normal</p>
+      <p class="fondo-rosa inline">Párrafo convertido a inline</p>
+      <p class="fondo-rosa inline">Párrafo convertido a inline</p>
+      <h3><code>Display: block</code></h3>
+      <a href="#" class="fondo-gold">Link normal</a>
+      <a href="#" class="fondo-gold">Link normal</a>
+      <a href="#" class="fondo-gold block">Link convertido a block</a>
+      <h3><code>Display: none</code></h3>
+      <p>El párrafo que hay justo debajo NO SE MUESTRA porque hemos usado display none</p>
+      <p class="none">Este párrafo no se ve</p>
+    </details>
+    <!-- Tamaño de cajas -->
+    <details>
+      <summary>Tamaños de cajas</summary>
+      <!-- El div tiene como padre el body, y la etiqueta p tiene como padre al div -->
+      <div class="padre-1 fondo-rosa">
+        <p class="hijo-1 fondo-gold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quos quas rem magnam nesciunt, voluptatem numquam incidunt velit perspiciatis ullam inventore nobis eos dolores libero sequi similique, obcaecati, minima blanditiis natus tempora at repudiandae a autem quod. Voluptates quod neque perspiciatis commodi, magni totam recusandae dolores molestias, quis modi assumenda!</p>
+      </div>
+    </details>
+    <!-- Le ponemos máximos y minimos a las cajas -->
+    <details>
+      <summary>Tamaños máximos y mínimos</summary>
+      <h3>div e img con un tamaño maximo de width y height </h3>
+       <div class="caja-1"></div>
+      <img class="img-1" src="https://picsum.photos/id/237/1000" alt="">
+    </details>
+    
+  </body>
+</html>

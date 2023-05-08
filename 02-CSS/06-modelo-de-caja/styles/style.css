@@ -1,0 +1,63 @@
+.fondo-rosa {
+  background-color: pink;
+}
+
+.fondo-gold {
+  background-color: gold;
+}
+
+.inline {
+  display: inline;
+}
+
+/*=================================================================*/
+
+/**Displays más básicos*/
+.block {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+
+/*================================================================*/
+
+/**Tamaño de cajas*/
+
+/*El 50% del div será el 50% con respecto a su padre, el body*/
+div.padre-1 {
+  /*?Anchos*/
+  width: 50%;
+}
+
+/*El 50% de p será el 50% de lo que ocupe su padre...en este caso el div*/
+p.hijo-1 {
+  /*?Anchos*/
+  width: 200px; /*de esta forma es un tamaño fijo con respecto al padre*/
+  width: 50%; /*de esta forma es un tamaño variable con respecto al padre*/
+
+  /*?Altos*/
+  height: 200px; /*Altura fija*//*!NADA RECOMENDABLE*/
+  height: 50%; /*Salvo que pongas una altura fija al div (que es el padre de p) no verás que cambie el height cuando uses un porcentaje*/
+  height: auto; /*Lo recomendable es dejarlo en auto*/
+}
+
+/*==============================================================*/
+
+/**Tamaños máxims y mínimos --> TOPES*/
+
+.caja-1 {
+  background-color: pink;
+  height: 200px;
+  width: 50%;
+  /*Máximo que le ponemos al ancho*/
+  max-width: 500px;
+}
+
+.img-1 {
+  width: 50%;
+  max-height: 300px;
+  min-height: 200px;
+}
