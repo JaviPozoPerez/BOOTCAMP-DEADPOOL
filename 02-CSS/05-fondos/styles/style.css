@@ -4,5 +4,37 @@
 }
 
 .fondo-imagen {
-  background-image: url(../assets/img/cielo.jpg);
+  background-image: url(../assets/img/huerto.jpg);
+  background-repeat: no-repeat; /*Así vitamos que la imagen se repita en el mismo párrafo*/
+
+  /*Para el tamaño de la imagen*/
+  background-size: 100px; /*tamaño por pixeles*/
+  background-position: 25% 50%; /*Para posicionar la imagen en los ejes x, y de la caja que ocupa el párrafo*/
+
+  /*!Esta es la combinacion más típica, cover con center*/
+  background-size: cover; /*con esta te cubre todo el párrafo con la foto una única vez sin deformarla..esta es la que mas se usa*/
+  background-position: center; /*te centra la imagen de fondo independientemente del tamaño de la ventana web*/
+
+
+  /**Todo esto se puede resumir en una, SHORTHAND*/
+  background: url(../assets/img/huerto.jpg) no-repeat center / cover; /*la barra (/) etre center y cover es importante*/
+}
+
+.fondo-fijo {
+  background-image: url("https://picsum.photos/id/237/400");
+  background-attachment: fixed; /*La imagen queda fija en el fondo aunque hagas scroll con el raton*/
+  background-size: cover;/*Para centrarlo en el parrafo tu sabeeee*/
+}
+
+.fondo-degradado {
+  background-image: linear-gradient(to left,red, gold);
+  background-image: linear-gradient(to right,red, gold);
+  background-image: linear-gradient(to left,red, gold);
+  background-image: linear-gradient( red 30%, gold, red);
+  background-image: radial-gradient(red, gold);
+}
+
+.fondo-imagen-color {
+  color: lightgrey; /*para el color de la letra*/
+  background: linear-gradient(rgba(255, 99, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://picsum.photos/id/237/400") center/cover; /*usamos la posibilidad de transparentar el fondo de rgba mezclado con una imagen*/
 }
