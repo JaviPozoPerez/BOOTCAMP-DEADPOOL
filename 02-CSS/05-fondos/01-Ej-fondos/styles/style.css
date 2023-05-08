@@ -1,0 +1,36 @@
+/*Ponemos todo el texto de la web en arial, bold y centrado*/
+body {
+  font-family: 'arial';
+  font-weight: bold;
+  text-align: center;
+}
+
+/*Los parrafos en mayusculas*/
+p {
+  text-transform: uppercase;
+}
+
+.aliquam {
+  color: white; /*color letra blanco*/
+  background: url("https://picsum.photos/id/2/500/?grayscale") center/cover; /*imagen de internet, centrada y que ocupe todo el parrafo sin dividirse*/
+}
+
+.tempus {
+  color: white;
+  background-color: rgb(72, 200, 209);
+}
+
+.magna {
+  color: white;
+  background: linear-gradient(125deg, rgb(216, 43, 72) 15%, blue); /*fondo con dos colores y una inclinacion de 1125 grados entre ellos*/
+}
+
+.ipsum {
+  color: white;
+  background: linear-gradient(to right, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)), url("https://picsum.photos/id/10/400") center/cover; /*una imagen de fondo con transparencias(rgba) al 0.5 de dos colores, centrada y con cover par que ocupe todo el parrafo*/
+}
+
+.consequat {
+  color: white;
+  background: linear-gradient(rgb(255, 61, 119, 0.6), rgba(252, 3, 219, 0.6)), url("https://picsum.photos/id/34/400") center/cover;
+}
