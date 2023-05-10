@@ -110,14 +110,41 @@ p.hijo-1 {
 
 /*==============================================================*/
 /*?MARGIN */
-/**Es el borde que rodea a el BORDER*/
+/**Es el espacio que hay entre mi caja y las siguientes cajas, es decir por fuera del BORDER*/
+
+.margin {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  margin: 0;
+}
 
 .margin-1 {
-
+  /*funciona como el padding respecto al orden de los parámetros*/
+  margin: 10px;
 }
 
 .margin-2 {
-  
+  margin: 10px; 
 }
 
-
+/*==============================================================*/
+/*?OUTLINE */
+/**Se encuentra entre el border y el margin, l diferencia que tiene con el border es que, al crecer sumandole px, NO mueve las cajas de alrededor, cosa que sí hace el border al crecer*/
+.boton-outline {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+}
+/*ejemplo de como el border separa las cajas del boton1 y boton2*/
+.btn1 {
+  border-width: 20px;
+  border-style: solid;
+  border-color: black;
+}
+/*ejemplo de como el outline no influye en la distancia de las cajas*/
+.btn2 {
+  outline: 50px;
+  outline-style: solid;
+  outline-color: red;
+}
