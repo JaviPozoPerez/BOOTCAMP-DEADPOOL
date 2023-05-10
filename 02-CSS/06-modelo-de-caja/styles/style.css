@@ -54,10 +54,70 @@ p.hijo-1 {
   width: 50%;
   /*Máximo que le ponemos al ancho*/
   max-width: 500px;
+  min-width: 300px;
 }
 
 .img-1 {
   width: 50%;
   max-height: 300px;
   min-height: 200px;
+  
+  object-fit: cover; /*evita que la imagen se deforme, te la recorta por tal de no deformarla*/
 }
+
+/*==============================================================*/
+/*?PADDING */
+/**El padding es el espacio que hay enttre lo que ocupa el contenido y el borde de la caja */
+
+.boton-1 {
+  text-decoration: none; /*lo tipico de quitarle el subrayado al link*/
+  color: red;
+  background-color: gold;
+  /*Añadimos espacios por orden de reloj, alrededor de la caja que ocupa el texto*/
+  padding-top: 5px; 
+  padding-right: 10px;
+  padding-bottom: 8px;
+  padding-left: 5px; 
+
+  /*Si usamos solo padding sin especificar zona de la caja, el padding respetará el orden de las agujas del reloj, por lo que lo de arriba y esto de abajo es lo mismo:*/
+  padding: 5px 10px 8px 5px;
+  /*Si alguna vez ves 3 valores en el padding es porque el de en medio tiene el mismo valor para izquida y derecha*/
+  padding: 10px 20px 10px ;
+  /*Si solo hay dos valores en el padding el primero es para arriba y abajo del padding y el segundo es para la izquierda y derecha del padding*/
+  padding: 10px 20px;
+  /*Si solo hay un valor es porque es el mismo valor de apdding para todos los margenes del padding*/
+  padding: 5px;
+}
+/*==============================================================*/
+/*?BORDER */
+/**Es el borde de la caja, lo que envuelve el padding*/
+
+.border-1 {
+  /*A partir de ahora siempre deberemos empezar un parrafo on un padding*/
+  padding: 5px;
+  color: red;
+  background-color: gold;
+
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  border-style: dotted;
+  border-style: dashed;
+
+  /*Ancho, estilo de borde, color*/
+  border: 2px solid black;
+}
+
+/*==============================================================*/
+/*?MARGIN */
+/**Es el borde que rodea a el BORDER*/
+
+.margin-1 {
+
+}
+
+.margin-2 {
+  
+}
+
+
