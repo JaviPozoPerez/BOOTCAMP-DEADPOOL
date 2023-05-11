@@ -66,4 +66,11 @@ h3 {
   margin: auto; /*centramos la caja dandole un margen auto*/
 }
 
+.texto-1 {
+  color: orange;
+  background-color: lightgray;
+}
 
+aside {
+  margin-top: 20px;
+}

@@ -1,0 +1,75 @@
+/**Para poder usar la fuente Roboto*/
+body {
+  font-family: 'Roboto', sans-serif;
+  
+  max-width: 600px; /*Limitamos el acnho de la caja del contenido a 600px*/
+  width: 60%;
+  margin: auto;
+
+  background-color: lightsalmon;
+}
+
+
+/**GENERAL*/
+
+/*Titulos a 700*/
+h1, h2, h3 {
+  font-weight: 700;
+  text-align: center;
+}
+
+
+h1{
+  background-color: black;
+  color: white;
+  text-align: right;
+}
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+h2 {
+  border-bottom: 5px solid lightgrey;
+}
+h3 {
+  background-color: lightsalmon;
+  width: fit-content; /*el tamaño de la caja que contiene el texto queda reducida a lo que ocupa el texto solo y unicamente*/
+  margin: auto; /*para centrar la caja, mismo margen a derecha e izquierda*/
+}
+
+/*Texto a 400*/
+p {
+  font-weight: 400;
+}
+
+.fondo {
+  background-color: white;
+  margin-top: 20px;
+  padding: 50px;
+}
+
+ul {
+  padding-inline: 80px/*clave para centrar los li*/;
+}
+
+li {
+  text-align: center;
+  background-color: lightgray;
+  padding: 5px; /*para que haya mas espacio entre las letras(contenido) y el contorno de la caja que lo envuelve*/margin: 10px; /*espacio etre las cajas de los li*/
+}
+
+nav {
+  padding: 10px; /*para que haya espacio en blanco por alrededor del nav*/
+}
+
+a {
+  text-decoration: none; /*Para qutar el subrayado*/
+  font-weight: bold;
+  color: black;
+}
+
+.noticias {
+  margin: auto;
+  font-weight: bold;
+}
