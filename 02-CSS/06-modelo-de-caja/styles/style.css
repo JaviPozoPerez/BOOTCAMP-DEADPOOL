@@ -148,3 +148,55 @@ p.hijo-1 {
   outline-style: solid;
   outline-color: red;
 }
+
+
+/*==============================================================*/
+/*?Box-sizing */
+/*Las cajas por defecto, para saber el ancho que ocupan, tenemos que sumar su WIDTH + PADDING + BORDER*/
+
+.caja-sizing { 
+  background-color: pink;
+  border: 5px solid black; 
+  padding: 10px; 
+}
+
+.sizing-1 {
+  width: 120px;/*acorta el tamaño de la caja que lo contiene, puesto que se trata de un tipo block*/
+  box-sizing: content-box; /*content-box muestra el tamaño de la caja que se ve por defecto, que es la suma de los 120px del width + (5+5)px de cada lado del border + (10+10)px de cada lado del padding....por lo que al inspeccionar(F12) la pagina web, beremos que esa caja ocupa un total de 150px*/
+}
+
+.sizing-2 {
+  width: 120px;
+  box-sizing:border-box;/*Con border-box, limitamos el contenido de la caja a lo que marca el width, es decir, solo 120px...contando en esos 120px ya lo que ocupa el border y el padding */
+}
+
+/*==============================================================*/
+/*?OVERFLOW */
+
+.overflow {
+  background-color: brown;
+  width: 150px; /*limito el tamaño de la caja a 150px*/
+  height: 200px; /*la caja de alto se me quedaría corta, por lo que parte del texto se quedaría fuera...esto lo podemos solucionar con OVERFLOW...*/
+
+  overflow: visible; /*se queda tal cual, por defecto.*/
+  overflow-y: scroll; /*te pone una barra de scroll en el eje y para evitar que se quede texto fuera*/
+  overflow: hidden; /*te corta el texto si el tamaño de la caja es menor que lo que ocupa el texto*/
+  overflow-y: auto; /*te pone un scroll solo cuando lo necesite el tamaño de la caja*/
+}
+
+/*==============================================================*/
+/*?TRUCO para centrar caja*/
+
+.centrar {
+  border: 2px solid black;
+  background-color: brown;
+  width: 70%;
+  text-align: center;
+  /*De esta dos formas puedes centrar la caja del div*/
+  /*forma 1*/
+  margin-left: auto;
+  margin-right: auto; 
+
+  /*forma 2*/
+  margin: auto;
+}
