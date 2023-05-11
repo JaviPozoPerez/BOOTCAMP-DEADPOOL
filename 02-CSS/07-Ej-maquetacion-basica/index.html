@@ -4,12 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/00-HTML/05-HTML_media/assets/yo_2.jpg">
+    <!-- Fuente Roboto sacada de GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@200;400;700&family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Para enlazar el archivo css con este html -->
     <link rel="stylesheet" href="./styles/style.css">
     <title>Ejercicio maquetación básica</title>
   </head>
 
   <body>
-    <h1>Ejercicio maquetación básica</h1>
+    <header>
+        <h1>Ejercicio de maquetación 07</h1>
+        <!--  Caja de la navegación-->
+        <nav class="navegador">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+                <li>
+                    <a href="#">Noticias anteriores</a>
+                </li>
+                <li>
+                    <a href="#">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- Caja del contenido -->
+    <main>
+        <section>
+            <!-- Sección de noticias -->
+            
+            <article>
+                <h2>Rato cree que lo peor de la crisis crediticia ya ha pasado</h2>
+                <h3 class="tomato"><time datetime="2008-05-05">05/05/2008</time></h3>
+                
+                <p><strong>Rodrigo Rato </strong>ha señalado en una entrevista con <span class="rgb">Bloomberg</span> que lo peor de la crisis de crédito ya ha pasado y que la fortaleza reciente del dólar está justificada. Los mercados nos están diciendo que es verdad, señaló el ex presidente del Fondo Monetario Internacional (FMI). Creo que algunas lecciones deben ser aprendidas. Los bancos centrales no sólo están reaccionando, inyectando liquidez, además están tomando un enfoque más centrado, dijo Rato.</p>
+            </article>
+            <!-- Fin Noticia -->
+
+            <article>
+                <h2>Salgado considera que lo peor de la crisis ya ha pasado</h2>
+                <h3 class="tomato"><time datetime="2010-07-29">29/07/2010</time></h3>
+                <p>La <span class="rgb">vicepresidenta</span> segunda del Gobierno y ministra de Economía, <strong>Elena Salgado</strong>, se mostró hoy optimista respecto a la evolución de la situación económica al asegurar en un discurso pronunciado en la localidad cántabra de Reocín con motivo de la celebración del Día de las Instituciones que lo peor ya ha pasado.</p>
+            </article>
+            <!-- Fin Noticia -->
+
+            <article>
+                <h2>Rajoy: Lo peor de la crisis ya ha pasado</h2>
+                <h3 class="tomato"><time datetime="2012-11-19">19/11/2012</time></h3>
+                <p>El <span class="rgb">presidente</span> del Gobierno español, <strong class="verde">Mariano Rajoy</strong>, expresó hoy en La Moncloa su total y absoluta convicción de que lo peor de la crisis económica que atraviesa el país ya ha pasado. Rajoy reiteró que España, sumida actualmente en la recesión, volverá a crecer en el año 2014. Y aseguró que 2013 será mejor que el año que está a punto de terminar.</p>
+            </article>
+            <!-- Fin Noticia -->
+
+            <article>
+                <h2>Montoro: Lo más complicado ya ha pasado</h2>
+                <h3 class="tomato"><time datetime="2014-10-21">21/10/2014</time></h3>
+                <p>El <span class="rgb">ministro</span> de Hacienda, <strong>Cristóbal Montoro</strong>, defendió hoy que los Presupuestos Generales del Estado son realistas y servirán para consolidar la recuperación económica. Durante su intervención en el Congreso de los Diputados, Montoro aseguró que lo más complicado ya ha pasado y sostuvo que los recortes ya no son necesarios.</p>
+            </article>
+            <!-- Fin Noticia -->
+
+            <article>
+                <h2>Soria: Lo peor ya ha pasado</h2>
+                <h3 class="tomato"><time datetime="2015-10-03">03/10/2015</time></h3>
+                <p><strong>José Manuel Soria</strong>, ministro de <span class="rgb">Industria</span>, Energía y Turismo, se presentó anoche en el barrio de San Nicolás (Las Palmas) para llevar un mensaje de esperanza. Los años que tenemos por delante pueden ser los mejores de nuestra vida. Lo peor ya ha pasado, recalcó.</p>
+            </article>
+            <!-- Fin Noticia -->
+        </section>
+        <!--  Caja de la navegación lateral-->
+        <aside>
+            <span>Otras notícias</span>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Notícia del mes pasado</a>
+                    </li>
+                    <li>
+                        <a href="#">Notícia de hace un tiempo</a>
+                    </li>
+                    <li>
+                        <a href="#">Noticia anterior</a>
+                    </li>
+                    <li>
+                        <a href="#">Notícia de hace un montón</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </main>
+    <!-- Pie de página -->
+    <footer>
+        <span>&copy; 2021 | Todos los derechos reservados</span>
+    </footer>    
   </body>
 </html>
