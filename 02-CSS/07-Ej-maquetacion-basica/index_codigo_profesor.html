@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles/style_profesor.css">
+
+    <title>Primera Maquetación Web</title>
+</head>
+<body>
+    <header>
+        <h1 class="main-title">Ejercicio de maquetación 01</h1>
+        <!--  Caja de la navegación-->
+        <nav class="main-menu container">
+            <ul class="main-menu__list">
+                <li class="main-menu__item">
+                    <a class="main-menu__link--active" href="./">Home</a>
+                </li>
+                <li class="main-menu__item">
+                    <a class="main-menu__link" href="./pages/blog/">Blog</a>
+                </li>
+                <li class="main-menu__item">
+                    <a class="main-menu__link" href="./pages/last-news/">Noticias anteriores</a>
+                </li>
+                <li class="main-menu__item">
+                    <a class="main-menu__link" href="./pages/contact/">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- Caja del contenido -->
+    <main>
+        <section class="news-section container">
+            <!-- Sección de noticias -->
+            
+            <article class="news">
+                <h2 class="news__title">Rato cree que lo peor de la crisis crediticia ya ha pasado</h2>
+                <h3 class="news__date"><time class="news__datetime" datetime="2008-05-05">05/05/2008</time></h3>
+                
+                <p>Rodrigo Rato ha señalado en una entrevista con Bloomberg que lo peor de la crisis de crédito ya ha pasado y que la fortaleza reciente del dólar está justificada. Los mercados nos están diciendo que es verdad, señaló el <span class="bg-gray text-salmon">ex presidente del Fondo Monetario Internacional (FMI)</span>. <q class="news__quote">Creo que algunas lecciones deben ser aprendidas</q>. Los bancos centrales no sólo están reaccionando, inyectando liquidez, además están tomando un enfoque más centrado, dijo Rato.</p>
+            </article>
+            <!-- Fin Noticia -->
+
+            <div class="separator"></div>
+
+            <article class="news">
+                <h2 class="news__title">Salgado considera que lo peor de la crisis ya ha pasado</h2>
+                <h3 class="news__date"><time class="news__datetime" datetime="2010-07-29">29/07/2010</time></h3>
+                <p>La vicepresidenta segunda del Gobierno y ministra de Economía, Elena Salgado, se mostró hoy optimista respecto a la evolución de la situación económica al asegurar en un discurso pronunciado en la localidad cántabra de <span class="text-blue">Reocín</span> con motivo de la celebración del Día de las Instituciones que <q class="news__quote">lo peor ya ha pasado</q>.</p>
+            </article>
+            <!-- Fin Noticia -->
+
+            <div class="separator"></div>
+
+            <article class="news">
+                <h2 class="news__title">Rajoy: Lo peor de la crisis ya ha pasado</h2>
+                <h3 class="news__date"><time class="news__datetime" datetime="2012-11-19">19/11/2012</time></h3>
+                <p>El presidente del Gobierno español, Mariano Rajoy, expresó hoy en La Moncloa su <q class="news__quote">total y absoluta convicción</q> de que lo peor de la crisis económica que atraviesa el país ya ha pasado. Rajoy reiteró que España, sumida actualmente en la recesión, volverá a crecer en el año 2014. Y aseguró que 2013 será mejor que el año que está a punto de terminar.</p>
+            </article>
+            <!-- Fin Noticia -->
+
+            <div class="separator"></div>
+
+            <article class="news">
+                <h2 class="news__title">Montoro: Lo más complicado ya ha pasado</h2>
+                <h3 class="news__date"><time class="news__datetime" datetime="2014-10-21">21/10/2014</time></h3>
+                <p>El ministro de Hacienda, Cristóbal Montoro, defendió hoy que los Presupuestos Generales del Estado son realistas y servirán para consolidar la recuperación económica. Durante su intervención en el Congreso de los Diputados, Montoro aseguró que <q class="news__quote">lo más complicado ya ha pasado</q> y sostuvo que <q class="news__quote">los recortes ya no son necesarios</q>.</p>
+            </article>
+            <!-- Fin Noticia -->
+            <div class="separator"></div>
+
+            <article class="news">
+                <h2 class="news__title">Soria: Lo peor ya ha pasado</h2>
+                <h3 class="news__date"><time class="news__datetime" datetime="2015-10-03">03/10/2015</time></h3>
+                <p>José Manuel Soria, ministro de Industria, Energía y Turismo, se presentó anoche en el barrio de San Nicolás (Las Palmas) para llevar <q class="news__quote">un mensaje de esperanza. Los años que tenemos por delante pueden ser los mejores de nuestra vida. Lo peor ya ha pasado</q>, recalcó.</p>
+            </article>
+            <!-- Fin Noticia -->
+        </section>
+        <!--  Caja de la navegación lateral-->
+        <aside class="aside container">
+            <h2 class="aside__title">Otras notícias</h2>
+            <nav class="secondary-menu">
+                <ul class="secondary-menu__list">
+                    <li class="secondary-menu__item">
+                        <a class="secondary-menu__link" href="#">Notícia del mes pasado</a>
+                    </li>
+                    <li class="secondary-menu__item">
+                        <a class="secondary-menu__link" href="#">Notícia de hace un tiempo</a>
+                    </li>
+                    <li class="secondary-menu__item">
+                        <a class="secondary-menu__link" href="#">Noticia anterior</a>
+                    </li>
+                    <li class="secondary-menu__item">
+                        <a class="secondary-menu__link" href="#">Notícia de hace un montón</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </main>
+    <!-- Pie de página -->
+    <footer class="footer">
+        <small>&copy; 2022 | Todos los derechos reservados</small>
+    </footer>    
+</body>
+</html>

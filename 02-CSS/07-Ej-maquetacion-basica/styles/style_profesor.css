@@ -1,0 +1,187 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('../assets/fonts/RobotoSlab-Medium.ttf');
+  font-weight: 500;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto';
+  background-color: lightsalmon;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  /* border: 2px solid crimson; */
+  margin: 0;
+}
+
+.container {
+  width: 60%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.main-title {
+  background: black;
+  color: white;
+  text-align: right;
+  margin: 0;
+  padding: 10px;
+}
+
+/* ============================================== */
+/* ================== MENU ===================== */
+
+
+.main-menu, .secondary-menu {  
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;  
+}
+
+.secondary-menu {
+  margin-top: 0;
+}
+
+
+.main-menu__item, .secondary-menu__item {
+  /* border: 1px solid blue; */
+  /* background-color: lightgray;
+  width: 75%;  
+  margin: 5px auto;
+  margin-inline: auto;
+  margin-block: 5px;
+  padding: 3px; */
+  margin: 5px 0;
+   
+}
+
+.main-menu__link, .main-menu__link--active, .secondary-menu__link {
+  /* border: 1px solid green; */
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+
+  display: inline-block;
+  width: 75%;
+  background-color: lightgray;
+  padding: 3px;
+}
+
+.main-menu__link--active {
+  text-decoration: underline;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.288);
+}
+
+
+
+/* ============================================== */
+/* ================= NOTICIAS =================== */
+
+.news-section {
+  padding: 45px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.news {
+ /* border-bottom: 2px dashed black;
+ padding-bottom: 50px;
+ margin-bottom: 50px; */
+}
+
+.separator {
+  border-top: 2px dashed black;  
+  margin: 50px 0;
+}
+
+.news__title {
+  margin-top: 0;
+  text-align: center;
+  border-bottom: 2px solid lightgray;
+}
+
+.news__date {  
+  text-align: center;
+}
+
+.news__datetime {
+  background-color: lightsalmon;
+  color: white;
+  padding: 0 15px;
+}
+
+.news__quote {
+  text-decoration: underline dotted lightsalmon;
+  font-family: 'Roboto Slab';
+  font-weight: 500;
+  /* border-bottom: 2px dotted lightsalmon; */
+}
+
+/* ============================================== */
+/* ================= ASIDE ===================== */
+
+.aside {
+  padding-top: 20px;
+}
+
+.aside__title {
+  text-align: center;
+  margin: 0;
+}
+
+
+
+
+
+
+/* ============================================== */
+/* ============ Clases de utilidad ============== */
+
+.text-blue {
+  color: blue;  
+}
+
+.text-salmon {
+  color: lightsalmon;
+}
+
+.bg-gray {
+  background-color: lightgray;
+}
+
+
+/* ============================================== */
+/* ================= FOOTER ===================== */
+
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 15px;
+}
