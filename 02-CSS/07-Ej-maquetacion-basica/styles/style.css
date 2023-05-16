@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(../assets/fonts/Roboto-Regular.ttf);
+  font-weight: 500; /*no es necesario porque por defecto es 500 pero lo ponemos*/
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../assets/fonts/Roboto-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Roboto slab';
+  src: url(../assets/fonts/RobotoSlab-Medium.ttf);
+  font-weight: 500;
+}
+
+/* Usamos '*' para referirnos a todo el codigo*/
+* {
+  box-sizing:border-box;/*Con border-box, limitamos el contenido de la caja a lo que marca el width, contando ya lo que ocupa el border y el padding */
+}
+
+body {
+  font-family: 'Roboto';
+  margin: 0; /*para conseguir que no haya margen que no queremos*/
+  background-color: lightsalmon;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+.tittle-main {
+  background-color: black;
+  color: white;
+  text-align: right;
+
+  padding: 5px;
+  margin: 0; /*para que no haya margenes y podamos dejar el titulo pegado a los bordes*/
+}
+
+.main-menu {
+  background-color: white;
+  width: 60%;
+  max-width: 600px;
+}
+
+ul.main-menu__list {
+  list-style: none; /*para quitar los puntos de las listas*/
+}
+
+.main-menu__link {
+  text-decoration: none; /*para quitarle a los links el subrayado*/
+}
