@@ -200,3 +200,62 @@ p.hijo-1 {
   /*forma 2*/
   margin: auto;
 }
+
+/*==============================================================*/
+/*?Sombras*/
+
+.sombra-1, .sombra-2 {
+  background-color: lightgray;
+  padding: 5px;
+  width: 250px;
+  text-align: center;
+}
+
+.sombra-1 {
+  box-shadow: 5px 5px 0px 0px black; /*los numeros son px, el primero te crea sombra a la derecha con numeros positivos y a la izquierda con numeros negativos, el segundo te mueve la sombra arriba o abajo, el tercero te difumina la sombra, y el cuarto te la hace más grande, el quinto valor es el color*/
+
+  /*Inset hace que la sombra vaya hacia dentro*/
+  box-shadow: 5px 5px 16px 0px red inset;
+}
+
+.sombra-2 {
+  box-shadow: 0px 0px 0px 3px red, 0px 0px 0px 6px blue, 0px 0px 0px 9px yellow;
+}
+
+.text-sombra {
+  /*primer numero sombra al eje x, segundo numero sombra al aeje y y tercero el difuminado, cuarto el color*/
+ text-shadow: 2px 5px 6px green;
+}
+
+/*==============================================================*/
+/*?Diferencias entre Displays*/
+
+p.display-block {
+  display: block; /*Esto no ahce falta ponerlo, simplemetene para aclarar que estamos modificando un display de tipo block*/
+  
+}
+
+span.display-inline {
+  display: inline;
+  border: 2px solid red;
+
+  width: 80%; /*!NO SE PUEDE*/
+  height: 50px; /*!NO SE PUEDE*/
+
+  padding: 20px; /*SE PUEDE*/
+
+  margin: 10px; /*SE PUEDE PERO SOLO POR LOS LADOS, ARRIBA Y ABAJO NO TE PONE MARGENES*/
+}
+
+span.display-inline-block {
+  /*Al poner que una etiqueta span, que por defecto es de tipi inline, le decimos que se transfomre a inline-block, conseguimos que todos los parámetros que sí se pueden usar en block se usen tmb en este span*/
+  display: inline-block;
+  border: 2px solid black;
+
+  width: 80%; /*SE PUEDE*/
+  height: 50px; /*SE PUEDE*/
+
+  padding: 20px; /*SE PUEDE*/
+
+  margin: 10px; /*SE PUEDE*/
+}
