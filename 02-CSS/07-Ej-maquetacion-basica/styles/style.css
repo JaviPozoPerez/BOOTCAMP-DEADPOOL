@@ -42,14 +42,31 @@ h1, h2, h3 {
 
 .main-menu {
   background-color: white;
-  width: 60%;
-  max-width: 600px;
+  border: 5px solid black;
+  width: 60%; /*con respeco al tamaño de la pantalla la caja ocupará un 60% del total*/
+  max-width: 600px; /*Como máximo podrá ocupar 600px*/
+  margin-top: 10px;
+
 }
 
 ul.main-menu__list {
-  list-style: none; /*para quitar los puntos de las listas*/
+  padding: 0;
+  margin: 0;;
+  
+}
+
+li.main-menu__item {
+  text-align: center; /*centramos el contenido de las cajas de la etiqueta "li", que son las que contienen los links*/
+  
+  margin-bottom: 5px;
 }
 
 .main-menu__link {
-  text-decoration: none; /*para quitarle a los links el subrayado*/
+  text-decoration: none; /*quitamos los subrayados de los links*/
+  background-color: lightgray;
+  color: black;
+  font-weight: 700;
+  display: inline-block; /*Transformamos de inline a block las etiquetas "a" (links)*/
+  width: 75%; /*al transformar los inline en block ya podemos darle un tamaño a sus cajas*/
+  padding: 5px;
 }
