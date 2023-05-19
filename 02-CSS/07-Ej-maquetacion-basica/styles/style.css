@@ -25,10 +25,12 @@ body {
   font-family: 'Roboto';
   margin: 0; /*para conseguir que no haya margen que no queremos*/
   background-color: lightsalmon;
+  
 }
 
 h1, h2, h3 {
   font-weight: 700;
+  text-align: center;
 }
 
 .tittle-main {
@@ -40,28 +42,38 @@ h1, h2, h3 {
   margin: 0; /*para que no haya margenes y podamos dejar el titulo pegado a los bordes*/
 }
 
-.main-menu {
-  background-color: white;
-  border: 5px solid black;
+.tam-max {
   width: 60%; /*con respeco al tamaño de la pantalla la caja ocupará un 60% del total*/
   max-width: 600px; /*Como máximo podrá ocupar 600px*/
-  margin-top: 10px;
-
+  margin-inline: auto;
 }
 
-ul.main-menu__list {
+
+/** -----------------HEADER----------------- */
+
+.header-menu {
+  background-color: white;
+  /* border: 5px solid black; */
+  
+  margin-top: 10px;
+  /* margin-inline: auto; */
+  padding: 10px; /*para distancia entre los límite de la caja de nav y su contenido*/
+}
+
+ul.header-menu__list {
   padding: 0;
-  margin: 0;;
+  margin: 0;
   
 }
 
-li.main-menu__item {
+li.header-menu__item {
   text-align: center; /*centramos el contenido de las cajas de la etiqueta "li", que son las que contienen los links*/
   
   margin-bottom: 5px;
+  list-style: none;
 }
 
-.main-menu__link {
+.header-menu__link {
   text-decoration: none; /*quitamos los subrayados de los links*/
   background-color: lightgray;
   color: black;
@@ -69,4 +81,55 @@ li.main-menu__item {
   display: inline-block; /*Transformamos de inline a block las etiquetas "a" (links)*/
   width: 75%; /*al transformar los inline en block ya podemos darle un tamaño a sus cajas*/
   padding: 5px;
+}
+
+/** -----------------MAIN----------------- */
+
+.main-menu {
+  background-color: white;
+  padding: 20px;
+  margin-top: 10px;
+  /* margin-inline: auto; */
+}
+
+h2.tittle {
+  border-bottom: 2px solid lightgray;
+}
+
+h3.date {
+  background-color: lightsalmon;
+  width: 120px;
+  color: white;
+  margin: auto;
+}
+
+span.texto {
+  background-color: lightgray;
+  color: lightsalmon;
+}
+
+.main-article {
+  padding: 50px 10px;
+  border-bottom: 4px dashed black;
+}
+
+/** -----------------ASIDE----------------- */
+
+.aside-menu {
+  background-color: white;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+/** -----------------FOOTER----------------- */
+
+.footer-main {
+  background-color: black;
+  color: white;
+  text-align: center;
+
+  padding: 20px;
+  margin: 0; /*para que no haya margenes y podamos dejar el titulo pegado a los bordes*/
 }
