@@ -1,0 +1,108 @@
+.inline {
+  display: inline; /*esto es solo para transformar el h2 del summary en inline*/
+}
+
+
+
+
+/*? SELECTORES */
+/**Los selectores son laas etiquetas que usamos antes de los corchetes como clases*/
+
+
+/*? TIPOS DE SELECTORES */
+/**Selectores Universales*/
+* {
+padding: 0;
+box-sizing: border-box;
+}
+
+/** Por etiqueta */
+body {
+  font-family: 'Arial' sans-serif;
+}
+
+/** Por su class */
+.titulo {
+  color: indigo;
+}
+
+/** Por su ID */
+#supertitulo {
+  text-decoration: underline;
+}
+
+/** Mezclando etiquetas sin poner espaciones (de esta manera aumentamos la especificidad */
+h1.titulo#supertitulo {
+  font-variant: small-caps;
+}
+
+/** Propiedades duplicadas */
+h2, h3 {
+  letter-spacing: 2px;
+}
+
+/* ====================================================*/
+/*? ==================== COSAS NUEVAS DE SELECTORES==========================*/
+
+/** Por su atributo */
+[placeholder] {
+  color: tomato;
+}
+
+/** Por su atributo y su valor */
+[type="email"] {
+  border: 2px solid crimson;
+}
+
+
+/** Por coincidencia en el valor de un atributo */
+/*Por ejemplo atributo id que empiecen por la palabra "nom" usando ^= */
+[id^= "nom"] {
+  border: 2px solid green;
+}
+
+/*Un atributo que termine por... $= */
+[name$="eto"] {
+  padding: 5px;
+}
+
+
+/*? ============ COMBINACION DE SELECTORES =============*/
+
+/** Hermanos ADYACENTES (es decir, que estén uno al lado del otro) */
+
+h2 + h3 { /*es decir, los h3 que estén seguido de un h2 se pondrán en rojo*/
+  color: red;
+}
+
+/* Otro ejemplo.... */
+/*En este caso se modificarán los inputs adyacentes a un label, es decir, que estén debajo de un label, a eso se le llama que son HERMANOS*/
+label + input[type="text"] {
+  box-shadow: 2px 0 0 3px yellow; /*sombreado*/
+}
+
+
+/** HERMANOS GENERALES */
+/*Es decir, no tiene que estar inmediatamente debajo de su hermano para ser modificado, basta conque esté en algún punto debajo de él*/
+
+h3~p { /*cambiaran a color lightsalmon todos los párrafos que estén, en algún punto, debajo de un h3*/
+  color: lightsalmon;
+}
+
+/** HIJOS DIRECTOS */
+/*Es decir, los il directos que contenga ul con clase lista (A los il con SUBITEMS no se les pondrá un border porque no son hijos directos de ul) */
+ul.lista > li {
+  border: 2px solid black;
+}
+
+/** Hijos GENERALES o DESCENDIENTES en general */
+/*Es decir, dentro del ul con clase lista, a cualquier li que haya se le pondrá un sombreado verde*/
+ul.lista li {
+  box-shadow: 0 0 10px 3px green;
+}
+
+
+
+
+/*? PSEUDOSELECTORES */
+
