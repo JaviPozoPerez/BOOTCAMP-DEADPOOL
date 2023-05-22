@@ -106,3 +106,38 @@ ul.lista li {
 
 /*? PSEUDOSELECTORES */
 
+/** Seleccionar el primer o último hijo usando -->  :first-child o :last-child */
+
+ul.lista-3 li:first-child {
+  color: red;
+}
+
+ul.lista-3 li:last-child {
+  color: blue;
+}
+
+/** Estilos con CSS para una tabla */
+table {
+  border-collapse: collapse; /*te junta las filas y columnas*/
+  border: 2px solid black;
+}
+
+tr, th, td {
+  border: 1px solid black;
+  padding: 2px;
+}
+
+table tr:first-child {
+  background-color: lightgray;
+}
+
+table tr:last-child td:last-child {
+  background-color: red;
+}
+
+/** PAra un elemento intermedio --> :nth-child (n) */
+table tr:nth-child(3) {
+  background-color: rgb(0 255 0 / 0.5);
+}
+
+
