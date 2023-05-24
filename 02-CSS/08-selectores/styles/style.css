@@ -6,7 +6,7 @@
 
 
 /*? SELECTORES */
-/**Los selectores son laas etiquetas que usamos antes de los corchetes como clases*/
+/**Los selectores son las etiquetas que usamos antes de los corchetes{} como clases*/
 
 
 /*? TIPOS DE SELECTORES */
@@ -71,7 +71,7 @@ h2, h3 {
 
 /** Hermanos ADYACENTES (es decir, que estén uno al lado del otro) */
 
-h2 + h3 { /*es decir, los h3 que estén seguido de un h2 se pondrán en rojo*/
+h2 + h3 { /*es decir, los h3 que estén inmediatamente después de un h2 se pondrán en rojo*/
   color: red;
 }
 
@@ -90,7 +90,7 @@ h3~p { /*cambiaran a color lightsalmon todos los párrafos que estén, en algún
 }
 
 /** HIJOS DIRECTOS */
-/*Es decir, los il directos que contenga ul con clase lista (A los il con SUBITEMS no se les pondrá un border porque no son hijos directos de ul) */
+/*Es decir, los li directos que contenga el ul con clase lista (A los li con SUBITEMS no se les pondrá un border porque no son hijos directos de ul) */
 ul.lista > li {
   border: 2px solid black;
 }
