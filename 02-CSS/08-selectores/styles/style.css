@@ -230,7 +230,7 @@ input.focus:focus {
 /*? PSEUDOELEMENTOS */
 /*! Van siempre con DOS PUNTOS :: */
 
-/* Para que el placeholder sea modificado */
+/* Para que el placeholder sea modificado usamos ::placholder */
 input[type="text"].focus::placeholder {
   color: red;
 } 
@@ -240,4 +240,61 @@ input[type="text"].focus::placeholder {
 ::placeholder {
   color: blue;
   font-size: 20px;
+}
+
+
+/** Para cambiar los marcadores de una lista usamos ::marker */
+ul.lista-4 {
+  padding-left: 25px; /*Un padding a la izquierda apra que se vean los puntos*/
+}
+
+ul.lista-4 li::marker {
+  content: '-->'; /*cambiamos el marcador por un '-->' */
+} 
+
+/** Para cambiar la primera letra (::first-letter) de un texto y la primera línea (::first-line) */
+p.primera-letra::first-letter {
+  font-size: 25px;
+  color: crimson;
+}
+
+p.primera-linea::first-line {
+  color: lightblue;
+}
+
+/**Para que cambie de color lo selecionado con el raton (::selection) */
+
+p.selection::selection {
+  background-color: yellowgreen;
+  color: crimson;
+}
+
+/** En el caso de que queramos aue todo el texto de la página sea un selection */
+::selection {
+  background-color: brown;
+  color: yellow;
+}
+
+ul.lista-4 li {
+  background-color: blue;
+}
+
+/** Uso del ::before y ::after */
+.antes-despues{
+  background-color: crimson;
+  text-align: center;
+  width: 400px;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+h3.antes-despues::before {
+  content: '✌'; /*para que aparezca algo hay que meterlo en content: '';  */
+}
+
+h3.antes-despues::after {
+  content: '👍';
+  display: inline-block; /*para poder cambiar el tamaño de la caja que ocupa*/
+  width: 50px;
+  background-color: green;
 }
