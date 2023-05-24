@@ -279,7 +279,7 @@ ul.lista-4 li {
   background-color: blue;
 }
 
-/** Uso del ::before y ::after */
+/**  Uso del ::before y ::after */
 .antes-despues{
   background-color: crimson;
   text-align: center;
