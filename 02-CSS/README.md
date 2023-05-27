@@ -10,8 +10,9 @@
 * [Generador de Gradientes](https://cssgradient.io/)
 * [Generador de fuentes fluidas](https://www.fluid-type-scale.com/) 
 * [Generador de Clip paths para recortar fotos con formas](https://bennettfeely.com/clippy/)
-
 * [Nombres propios de colores CSS](https://www.w3schools.com/colors/colors_names.asp)
+* [Notas que explica cosas de CSS en su pagian web](https://www.joshwcomeau.com/)
+* [Tutoriales en Youtube de Kevin Powell](https://www.youtube.com/results?search_query=kevin+powell)
 
 ### Iconos
 

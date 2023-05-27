@@ -1,0 +1,109 @@
+body {
+  font-family: 'Arial' sans-serif;
+}
+
+summary > h2 { /*todos los h2 que san hijos de summary pasaran a ser inline*/
+  display: inline;
+}
+
+/*==========================================================*/
+
+/*? TRANSICIONES */
+/*! SOLO VAMOS A PODER USAR TRANSICIONES SOBRE AQUELLAS PROPEIDADES QUE PUEDAN "TRANSITAR MATEMATICAMENTE" DE UN ESTADO A OTRO*/
+/** Las transiciones se ponen siempre en el modo normal, no en el de los pseudoelementos */
+
+
+/**Ejemplo con BUTTON */
+.btn {
+  background-color: gold;
+  padding: 5px 10px;
+  font-size: 20px;
+  cursor: pointer; /*Para cambiar la forma del cursor cuando estés encima*/
+
+  /*Primero indicas que propiedad quieres que tenga una transicion con "transition-propiety" y luego le dices cuanto quieres que tarde en hacer la transcion con "transition-duration"*/
+  transition-property: color;
+  transition-property: background-color;
+  transition-duration: 3s;
+
+  /*Para poner un tiempo que tarda en comenzar a hacer la transición*/
+  transition-delay: 5s;
+
+  /*ease | ease-in | ease-out | ease-in-out */
+  transition-timing-function: ease-out;
+
+  /*Lo puedes poner todos los parámetros a la vez, de hecho es el método más usado */
+  /*Primer parámetro la propiedad, segundo el tiempo de transcion, tercero el delay y cuarto el tipo de timing*/
+  transition: color 3s 1s ease, background-color 2s;
+}
+
+.btn:hover { /*hover era un cambio que se produce al poner el cursor encima */
+  background-color: indigo;
+  color: white;
+}
+
+.btn-1 {
+  background-color: gold;
+  padding: 5px 10px;
+  font-size: 20px;
+  opacity: 1; /*es 1 ó 0 y por defecto siempre está en 1, pero apra que se vea bien lo ponemos*/
+
+  transition: opacity 2s; /*Opacity pasa a 0 (desparece el button) a los 2s cuando nos ponemos encima*/
+}
+
+.btn-1:hover{
+  opacity: 0;
+}
+
+
+/**Ejemplo con INPUT*/
+input {
+  outline: 2px solid crimson;
+  padding: 5px;
+
+  /*Cuando haces click en el input cambiará el borde a otro color en 2s...al igaul que cuando quitas el click sobre la caja*/
+  transition: outline-color 2s;
+}
+
+input:focus { /*Focus era que se activaba cuando se hacía clik */
+  outline-color: gold;
+}
+
+
+/*=============================================================*/
+
+/*? TRANSFORM */
+/** Es una propiedad que permite mover, girar y otras opciones*/
+
+img {
+  transition: transform 3s;
+}
+
+img.foto-1:hover{
+  transform: translateX(50px); /*translada la foto en el eje X*/
+  transform: translateY(50px); /*translada la foto en el eje Y*/
+  transform: translate(50px, 50px); /*Traslada la foto en diagonal 50px por el ejex y 50px por el ejey*/
+  transform: translate(-50%); /*Se mueve la mitad de lo que ocupa la foto*/
+}
+
+img.foto-2:hover {
+  transform: scaleX(2); /*Agranda la foto en el eje X el doble*/
+  transform: scaleY(2); /*Agranda la foto en el eje Y el doble*/
+  transform: scale(2); /*Agranda la foto en el eje X e Y el doble*/
+}
+
+img.foto-3:hover {
+  transform: skewX(45deg); /*Te dobla en angulo la foto */
+  transform: skewY(45deg); /*Te dobla en angulo la foto */
+  transform: skew(45deg 30deg); /*Te dobla en angulo la foto */
+}
+
+img.foto-4:hover { /**El rotate se ve MEJOR si usamos la propiedad "perspective" junto a ella...el contenido de "perspective" en px simboliza lo lejos que estoy de la imagen..cuanto más pz más lejos y menos efecto*/
+  transform: perspective(500px) rotateY(45deg); /*Te dobla en angulo la foto */
+  transform: perspective(500px) rotateZ(45deg); /*Te dobla en angulo la foto */
+  transform: perspective(500px) rotateX(45deg); /*Te dobla en angulo la foto */
+}
+
+/*!Podemos usar varios valores a la vezz*/
+img.foto-4:hover {
+  transform: scale(1.1) translate(50px) skew(30deg);
+}

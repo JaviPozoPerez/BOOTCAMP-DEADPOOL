@@ -24,7 +24,7 @@
   
 ### Imagenes gratuitas para usar
 
-* [Picsum]("https://picsum.photos.com) /*Para usar imagenes gratuitas de internet sin descargarlas*/
+* [Picsum](https://picsum.photos/) /*Para usar imagenes gratuitas de internet sin descargarlas*/
 * [Unsplash](https://unsplash.com/es)
 * [Pexels](https://www.pexels.com/es-es/)
 * [Pixabay](https://pixabay.com/es/)
