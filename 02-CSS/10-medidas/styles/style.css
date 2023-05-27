@@ -1,0 +1,59 @@
+body {
+  font-family: 'Arial' sans-serif;
+}
+
+summary > h2 {
+  display: inline;
+}
+
+.container {
+  border: 2px solid  black;
+  /** MEdidas en pixeles y en % */
+  max-width: 600px;
+  width: 50%;
+}
+
+/**? Medidas en  % */
+.padre-1 {
+  border: 2px solid black;
+  width: 50%;
+}
+
+.hijo-1 {
+  border: 2px solid crimson;
+  width: 50%;
+}
+
+/**? Medidas en VIEWPORT (medidas respecto a la pantalla blanca, NO respecto a la de su padre como ocurre con los pixeles y %)*/
+
+.padre-2 {
+  border: 2px solid black;
+  width: 50vw; /*No es la mitad del container, es la mitad de la pantalla blanca*/
+  height: 40vh;
+}
+
+.hijo-2 {
+  border: 2px solid crimson;
+  width: 30vw; /*No es la mitad del padre-2...es la mitad de la pantalla blanca*/
+  height: 30vh;
+}
+
+/*? Valores REM */
+/** Es un valor que se multiplica por el font-size que tenga la etiqueta raiz, es decir <html>. Si no tuviera un font-size establecido a posta, se usará el tamaño por defecto (16px) */
+
+h3.rem {
+  font-size: 1rem; /*En este caso 1rem = 16px...puesto que obtendría el valor por defecto del font-size de la raiz <html> que viene por defecto*/
+}
+
+html {
+  font-size: 20px;
+}
+
+h3.rem {
+  font-size: 1rem; /*Ahora 1rem = 20px, puesto que equivaldría al font-size establecido por nosotros 2 rem equivaldrá a 40px*/
+  font-size: 1rem;
+}
+
+/*? Valores EM */
+/** Es un valor que se multiplicará por el valor del font-size más cercano (NO EL DE LA RAIZ COMO LOS REM), incluido el font-size de sí mismo*/
+

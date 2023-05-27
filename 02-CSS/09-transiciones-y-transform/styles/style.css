@@ -107,3 +107,14 @@ img.foto-4:hover { /**El rotate se ve MEJOR si usamos la propiedad "perspective"
 img.foto-4:hover {
   transform: scale(1.1) translate(50px) skew(30deg);
 }
+
+
+/*? FILTERS */
+
+img.foto-5:hover {
+  filter: blur(2px); /*Aplica un filtro que emborrona una imagen o texto*/
+  filter: brightness(0.8); /*Por debajo de 1 oscurece por encima lo aclara */
+  filter: saturate(0.5); /*Entre 0 y 1 oscurece los colores y por encima de 1 los satura*/
+  filter: sepia(40%); /*vuelve sepia la imagen*/
+  filter: drop-shadow(-10px -20px 10px crimson); /*te hace un sombreado por detrás de la imagen*/
+}
