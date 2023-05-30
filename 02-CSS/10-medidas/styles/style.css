@@ -10,7 +10,7 @@ summary > h2 {
   border: 2px solid  black;
   /** MEdidas en pixeles y en % */
   max-width: 600px;
-  width: 50%;
+  width: 70%;
 }
 
 /**? Medidas en  % */
@@ -89,21 +89,18 @@ span.em-hijo {
 }
 
 /**Mismo ejemplo pero usando EM*/
+/*!Estableciendo en la clase que comparten los tres botones (btn-em) un font-size...en el resto bastará con modificar el valor font-size modificacndo el valor em (que por defecto es el que marca la clase general btn-em en este caso)...así todos los valores como border y padding no habrá que sobreescribirlos si le queremos modificar el tamaño, basa con mdificar el font-size de la clase en particular que queramos ver modificada*/
 .btn-em {
-  
-  /* background-color: gold;
+  font-size: 16px;
+  background-color: crimson;
   border: 0.2em solid black;
   padding: 0.5em 1em; */
 }
 
 .btn-xl-em {
-  font-size: 20px;
-  border: 3px solid black;
-  padding: 7px 13px;
+  font-size: 2em;
 }
 
 .btn-sm-em {
-  font-size: 10px;
-  border: 1px solid black;
-  padding: 3px 7px;
+  font-size: 0.5em;
 }
