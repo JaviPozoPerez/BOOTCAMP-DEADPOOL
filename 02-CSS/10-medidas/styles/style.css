@@ -55,7 +55,8 @@ h3.rem {
 }
 
 /*? Valores EM */
-/** Es un valor que se multiplicará por el valor del font-size más cercano (NO EL DE LA RAIZ COMO LOS REM), incluido el font-size de sí mismo*/
+/** Es un valor que se multiplicará por el valor del font-size más cercano (NO EL DE LA RAIZ COMO LOS REM),*/ 
+/*!incluido el font-size de sí mismo*/
 
 h3.em-padre {
   font-size: 2em; /*Este font-size es 2*(el font-size más cercano que tenga por encima de él), es decir, el font-size de su padre, que es container, pero container no tiene un font-size impuesto por él, container tiene el font-size heredado de html, que es el siguiente font-size más inmediato, en este caso un font-size puesto por nosotros más arriba de 20px...por lo que el font-size de este h3 será 2*20 = 40px*/
@@ -64,4 +65,45 @@ h3.em-padre {
 span.em-hijo {
   color: hotpink;
   font-size: 2em; /*En este caso será un font-size será 2*el tamaño de el font-size de su padre...es decir, del h3 de arriba, 40px...por lo que en este caso 2*40px*/
+}
+
+
+/**Ejemplo con botones normales sin usar EM*/
+.btn {
+  background-color: gold;
+  border: 2px solid black;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.btn-xl {
+  font-size: 20px;
+  border: 3px solid black;
+  padding: 7px 13px;
+}
+
+.btn-sm {
+  font-size: 10px;
+  border: 1px solid black;
+  padding: 3px 7px;
+}
+
+/**Mismo ejemplo pero usando EM*/
+.btn-em {
+  
+  /* background-color: gold;
+  border: 0.2em solid black;
+  padding: 0.5em 1em; */
+}
+
+.btn-xl-em {
+  font-size: 20px;
+  border: 3px solid black;
+  padding: 7px 13px;
+}
+
+.btn-sm-em {
+  font-size: 10px;
+  border: 1px solid black;
+  padding: 3px 7px;
 }
