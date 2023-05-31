@@ -1,0 +1,28 @@
+/*?-------------Reset básico---------- */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/** De esta manera decimos que todas las imagenes ocuparan como máximo el mismo espacio que el padre que la contiene, es decir, nunca serán más grandes u ocuparán más que su padre*/
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/** Para evitar cortes de alturas...*/
+html, body {
+  min-height: 100%;
+}
+
+
+/*?----------------------------------- */
+
+
+.div-1 {
+  border: 1px solid crimson;
+  width: 200px;
+  height: 200px;
+}

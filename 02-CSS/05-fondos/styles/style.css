@@ -5,7 +5,7 @@
 
 .fondo-imagen {
   background-image: url(../assets/img/huerto.jpg);
-  background-repeat: no-repeat; /*Así vitamos que la imagen se repita en el mismo párrafo*/
+  background-repeat: no-repeat; /*Así evitamos que la imagen se repita en el mismo párrafo */
 
   /*Para el tamaño de la imagen*/
   background-size: 100px; /*tamaño por pixeles*/

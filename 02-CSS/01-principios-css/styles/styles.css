@@ -12,7 +12,7 @@
 
   -Llaves -> es decir, {}. Abren el bloque donde van todas las propiedades CSS que trndrá el selector
 
-  -Propiedad -> Cada una de las palabras delate de los dos puntos...color:
+  -Propiedad -> Cada una de las palabras delante de los dos puntos..."color":
 
   -Dos puntos ->
 
@@ -78,9 +78,9 @@ h3 {
     /**Etiquete "!important"...da igual la relevancia de la etiqueta, porque si le pones important al lado del atributo color se convertirá en la más relevante...por ejemplo, la etiqueta h4 es la menos relevante, pero poniendole !important la convertimos en la más relevante
     
     /*!etiqueta h4 con un !important*/
-    h4 {
-      /*color: green !important;*/
-    }
+    /*h4 {
+      color: green !important;
+    }*/
 
 
     /**Podemos poner varios selectores seguidos separados por coma para darte un mismo atributo, ejemplo:*/
