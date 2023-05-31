@@ -7,12 +7,13 @@ summary > h2 {
 }
 
 .container {
-  border: 2px solid  black;
+  /* border: 2px solid  black; */
   /** MEdidas en pixeles y en % */
   max-width: 600px;
   width: 70%;
 }
 
+/*?------------------------------------------------------*/
 /**? Medidas en  % */
 .padre-1 {
   border: 2px solid black;
@@ -24,6 +25,7 @@ summary > h2 {
   width: 50%;
 }
 
+/*?------------------------------------------------------*/
 /**? Medidas en VIEWPORT (medidas respecto a la pantalla blanca, NO respecto a la de su padre como ocurre con los pixeles y %)*/
 
 .padre-2 {
@@ -38,6 +40,7 @@ summary > h2 {
   height: 30vh;
 }
 
+/*?------------------------------------------------------*/
 /*? Valores REM */
 /** Es un valor que se multiplica por el font-size que tenga la etiqueta raiz, es decir <html>. Si no tuviera un font-size establecido a posta, se usará el tamaño por defecto (16px) */
 
@@ -54,6 +57,7 @@ h3.rem {
   font-size: 1rem;
 }
 
+/*?------------------------------------------------------*/
 /*? Valores EM */
 /** Es un valor que se multiplicará por el valor del font-size más cercano (NO EL DE LA RAIZ COMO LOS REM),*/ 
 /*!incluido el font-size de sí mismo*/
@@ -94,7 +98,7 @@ span.em-hijo {
   font-size: 16px;
   background-color: crimson;
   border: 0.2em solid black;
-  padding: 0.5em 1em; */
+  padding: 0.5em 1em; 
 }
 
 .btn-xl-em {
@@ -103,4 +107,18 @@ span.em-hijo {
 
 .btn-sm-em {
   font-size: 0.5em;
+}
+
+/*?------------------------------------------------------*/
+/*? uso del calc() y clamp() */
+
+div.calc {
+  padding: 1rem;
+  background-color: crimson;
+  width: 50%;
+  width: calc(50% + 100px); /*Te deja un tamaño de caja del 50% de la pantalla +100px*/
+}
+
+h3.clamp {
+  font-size: clamp(2rem, 7vw, 3rem); /*en este caso el texto va a crecer o decrecer según el tamaño de la pantalla como mínimo a un tamaño de 2rem y como máximo a un tamaño de 3 rem...a un paso de 7vw*/
 }
