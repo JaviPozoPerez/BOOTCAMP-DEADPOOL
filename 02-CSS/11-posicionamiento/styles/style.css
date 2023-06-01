@@ -47,11 +47,17 @@ summary > h2 {
   z-index: 1; /*Para elegir qué caja va por encima*/
 }
 
+/* Un input tmb puede ser movido mediante position */
+input {
+  position: relative;
+  left: 20px;
+}
+
 
 /*?-----ABSOLUTE-----*/
 /*! 1.- Al poner absolute hacemos que  la caja se salga del flujo, es decir, es como si ya no ocupara el espacio que le toca ocupar, por lo que otra caja ocupa su lugar*/
 /*! 2.- Al poner absolute en todas las cajas hijas que contiene la caja padre hará que todas se coloque en la parte superior izauierda de ellas...que es donde se colocaría la primera en estado normal*/
-/*! 3.- ATENTO ESTO ES DIFICIL DE ENTENDER: Cuando a una caja le das un valor; right, left, top o bottom..lo que estás diciendo es que la separas tantos pixeels como hayas puesto del ancestro más cercano el cual tenga un position dierente a "static"...es decir, si NO hubiese un ancestro que tenga un position diferente a static, porque static es el de por defeco, los cambios se harían respecto a la caja raiz...en este caso la caja padre (lo rosa) lo tenemos como position: relative; por lo que los cambios que hagamos serán respecto a este padre...entonces...si por ejemplo ponemos right: 50px;....esto significa que la caja estará separada 50px del lado derecho de la caja roda...si le ponemos right: 1px;...esto significa que practicamente estará pegada al lado derecho de la caja roda...separada unicamnete por 1px de distancia...ENTIENDES O NOOOO????...pues lo mismo con top, left y bottom*/
+/*! 3.- ATENTO ESTO ES DIFICIL DE ENTENDER: Cuando a una caja le das un valor; right, left, top o bottom..lo que estás diciendo es que la separas tantos pixeels como hayas puesto del ancestro más cercano el cual tenga un position dierente a "static"...es decir, si NO hubiese un ancestro que tenga un position diferente a static, porque static es el de por defeco, los cambios se harían respecto a la caja raiz...en este caso la caja padre (lo rosa) lo tenemos como position: relative; por lo que los cambios que hagamos serán respecto a este padre...entonces...si por ejemplo ponemos right: 50px;....esto significa que la caja estará separada 50px del borde dell lado derecho de la caja rosa (dentro de ella)...si le ponemos right: 1px;...esto significa que practicamente estará pegada al lado derecho de la caja rosa...separada unicamnete por 1px de distancia...ENTIENDES O NOOOO????...pues lo mismo con top, left y bottom*/
 
 .padre-absolute {
   position: relative;
@@ -77,4 +83,34 @@ summary > h2 {
   background-color: blue;
   width: 110px;
   height: 120px;
+}
+
+
+/*?-----FIXED-----*/
+
+/*! Fixed siempre tendrá como padre la caja raiz, la ventena del navegador por así decirlo, no le influyen los ancestros que tenga, y los movimientos de left, right etc...son similares a los de absolute...su posición se mantendrá aún haciendo scroll en la pantalla*/
+
+.hijo-fixed {
+  position: fixed;
+  top:10px;
+}
+
+.hijo-fixed-2 {
+  background-color: blue;
+  width: 180px;
+}
+
+/*?-----STICKY-----*/
+/*! 1.- No se sale del flujo, se queda guardando su posición*/
+/*! 2.- AQUI es imporante el scroll y la caja padre que lo contiene....por ejemplo, si ponemos top:10px; significa que la caja mantendrá una posición de separación con respecto al borde superior de la pantalla del navegador de 10px o más, siempre y cuando eso no implique salirse de su caja padre...PARA ENTENDERLO BIEN HAZ SCROLL Y MIRA GAFAA*/
+/*! 3.-Si no usamos top, right, left o bottom se queda donde está sin hacer nada y listo */
+
+.hijo-sticky {
+  position: sticky;
+  top: 10px;
+}
+
+.hijo-sticky-2 {
+  background-color: blue;
+  width: 180px;
 }

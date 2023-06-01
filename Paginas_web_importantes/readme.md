@@ -12,19 +12,8 @@
 
 * [Página con CDNs para usar librerías externas.](https://cdnjs.com/)
 
-* [Página para ver un codigo markdown en codigo html. y chuletas de como usar las etiquetas markdown](https://markdowntohtml.com/) 
-
-* [Página web donde se pueden hacer preguntas en comunidad y resolverlas](https://es.stackoverflow.com/) 
-
-* [Página web de truquis pasada por Victor alias Muni](https://overapi.com/)
-  
-* [Página web que visualiza tu codigo como pagina web](https://vercel.com)
-
-* [Para descargar fuentes](https://fonts.google.com)
-  
 ### Imagenes gratuitas para usar
 
-* [Picsum](https://picsum.photos/) /*Para usar imagenes gratuitas de internet sin descargarlas*/
 * [Unsplash](https://unsplash.com/es)
 * [Pexels](https://www.pexels.com/es-es/)
 * [Pixabay](https://pixabay.com/es/)
