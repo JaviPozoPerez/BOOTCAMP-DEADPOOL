@@ -1,3 +1,7 @@
+summary > h2 {
+  display: inline-block;
+}
+
 .container {
   width: 80%;
   max-width: 800px;
@@ -24,14 +28,53 @@
 }
 
 /*?-----RELATIVE-----*/
-/*! 1- El espacio que deja la caja al ser movido con position top, left, etc...sigue estando "ocupado"*/
-/*! 2- Una caja con un positivon relative SUPERPONE (hablando de capas) a una caja que tenga position static"*/
+/*! 1- El espacio que deja la caja al ser movida con position top, left, etc...sigue estando "ocupado"*/
+/*! 2- Una caja con un positivon relative SUPERPONE (hablando de capas una encima de otras) a una caja que tenga position "static"*/
+/*! 3- Para elegir qué caja queremos por encima y cual por abajo podemos usar z-index...la caja que tenga un valor de z-index mayor estará por encima de la que tenga un z-index menor*/
 
 
 .hijo-relative {
   position: relative; /*Al poner relative no pasa nada, es decir, las cajas (en este caso los div) se quedan donde están*/
-  left: 100px; /*Esto deja un espacio de 100px en la izquierda de la caja*/
-  top: 50px; /*Esto deja un espacio de 100px arriba de la caja */
-  bottom: 50px; /*Esto deja un espacio de 100px abajo de la caja */
-  right: 100px; /*Esto deja un espacio de 100px en la derecha de la caja*/
+  left: 100px; /*Esto DEJA un espacio de 100px en la izquierda de la caja*/
+  top: 50px; /*Esto DEJA un espacio de 100px arriba de la caja */
+  bottom: 50px; /*Esto DEJA un espacio de 100px abajo de la caja */
+  right: 100px; /*Esto DEJA un espacio de 100px en la derecha de la caja*/
+  z-index: 2; /*Para elegir qué caja va por encima*/
+}
+
+.hijo-relative-2 {
+  position: relative;
+  z-index: 1; /*Para elegir qué caja va por encima*/
+}
+
+
+/*?-----ABSOLUTE-----*/
+/*! 1.- Al poner absolute hacemos que  la caja se salga del flujo, es decir, es como si ya no ocupara el espacio que le toca ocupar, por lo que otra caja ocupa su lugar*/
+/*! 2.- Al poner absolute en todas las cajas hijas que contiene la caja padre hará que todas se coloque en la parte superior izauierda de ellas...que es donde se colocaría la primera en estado normal*/
+/*! 3.- ATENTO ESTO ES DIFICIL DE ENTENDER: Cuando a una caja le das un valor; right, left, top o bottom..lo que estás diciendo es que la separas tantos pixeels como hayas puesto del ancestro más cercano el cual tenga un position dierente a "static"...es decir, si NO hubiese un ancestro que tenga un position diferente a static, porque static es el de por defeco, los cambios se harían respecto a la caja raiz...en este caso la caja padre (lo rosa) lo tenemos como position: relative; por lo que los cambios que hagamos serán respecto a este padre...entonces...si por ejemplo ponemos right: 50px;....esto significa que la caja estará separada 50px del lado derecho de la caja roda...si le ponemos right: 1px;...esto significa que practicamente estará pegada al lado derecho de la caja roda...separada unicamnete por 1px de distancia...ENTIENDES O NOOOO????...pues lo mismo con top, left y bottom*/
+
+.padre-absolute {
+  position: relative;
+}
+
+.hijo-absolute {
+  position: absolute;
+  width: 170px;
+  height: 150px;
+  top: 50%;/*Con esto le dices que RESPECTO AL CENTRO DEL PADRE, el hijo quede tocando su parte de arriba con ese centro*/
+  left: 50%; /*Con esto le dices que RESPECTO AL CENTRO DEL PADRE, el hijo quede tocando la izquierda de ese centro*/
+  transform: translate(-50%, -50%);/*con esto conseguimos centrar al hijo en el centro del eje X del padre, porque decimos que lo que ocupa un 50% del hijo, se mueba a la izquierda (-) en el eje X*/
+}
+
+.hijo-absolute-2 {
+  background-color: green;
+  width: 160px;
+  height: 140px;
+}
+
+.hijo-absolute-3 {
+  
+  background-color: blue;
+  width: 110px;
+  height: 120px;
 }
