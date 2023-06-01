@@ -1,28 +1,37 @@
-/*?-------------Reset básico---------- */
-
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 4rem auto;
 }
 
-/** De esta manera decimos que todas las imagenes ocuparan como máximo el mismo espacio que el padre que la contiene, es decir, nunca serán más grandes u ocuparán más que su padre*/
-img {
-  max-width: 100%;
-  max-height: 100%;
+/*?----POSICIONAMIETNOS----*/
+
+.padre {
+  background-color: lightpink;
+  height: 300px;
+  border: 4px solid black;
+  margin: 2rem 0;
+  position: static; /* Por defecto*/
 }
 
-/** Para evitar cortes de alturas...*/
-html, body {
-  min-height: 100%;
+.hijo {
+  background-color: gold;
+  height: 120px;
+  border: 4px solid black;
+  width: 140px;
+  text-align: center;
+
 }
 
+/*?-----RELATIVE-----*/
+/*! 1- El espacio que deja la caja al ser movido con position top, left, etc...sigue estando "ocupado"*/
+/*! 2- Una caja con un positivon relative SUPERPONE (hablando de capas) a una caja que tenga position static"*/
 
-/*?----------------------------------- */
 
-
-.div-1 {
-  border: 1px solid crimson;
-  width: 200px;
-  height: 200px;
+.hijo-relative {
+  position: relative; /*Al poner relative no pasa nada, es decir, las cajas (en este caso los div) se quedan donde están*/
+  left: 100px; /*Esto deja un espacio de 100px en la izquierda de la caja*/
+  top: 50px; /*Esto deja un espacio de 100px arriba de la caja */
+  bottom: 50px; /*Esto deja un espacio de 100px abajo de la caja */
+  right: 100px; /*Esto deja un espacio de 100px en la derecha de la caja*/
 }
