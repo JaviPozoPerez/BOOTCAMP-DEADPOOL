@@ -1,0 +1,147 @@
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 4rem auto;
+}
+
+summary > h2 {
+  display: inline-block;
+}
+
+details {
+  margin: 20px auto; /*para darle más espacio entre details*/
+}
+
+/*?----------------------------------------------*/
+/*?Ejemplo 1 simple de un overlay sobre una foto real*/
+/*?----------------------------------------------*/
+
+.padre-1 {
+  position: relative; /*Este position lo ponemos para que la caja padre de overlay sea esta, padre-1, y NO la raiz...puesto que si todos los ancestros de overlay tienen position static, el padre de overlay será pro defecto la caja raiz, el navegador*/
+  
+  width: 300px; /*Si ponemos un widht inferior al tamaño de la foto, la foto se adapta al tamaño del width...pero solo y únicamente por el reset css que le hemos puesto*/
+
+  overflow: hidden; /*lo qu ehay fuera de los bordes del padre no se ve, hasta que entra...*/
+}
+
+.overlay-1 {
+  position: absolute;
+  top: 0px;
+  background-color: rgb(255 0 0 / 0.5);
+  height: 100%;
+  width: 100%;
+  opacity: 0; /*Cuando es 0 no se ven los cambios (el color del backgraund)*/
+  transition: opacity 0.5s ease; /*esto para hacer la transción más flama*/
+
+  
+}
+
+.overlay-1:hover {
+  opacity: 1; /*cuando ponemos el cursor encima de la imagen (hover) opasicity vuelve a ser 1 y se ven los cambios*/
+}
+
+.tittle-1 {
+  position: absolute; /*Al poner absolute el h3 ocupa lo que un display inline, pero sigue siendo un display block*/
+
+  top: 150%; /*lo mandamos para abajo un 150% con respecto al borde superior del div padre para que aparezca luego usando hover*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* border: 3px solid blue; */
+  color: gold;
+  opacity: 0;
+  transition: top 0.7s ease-in; /*esto es una transición hacia arriba a una velocidad de 0.7segundos de tipo ease-in*/
+}
+
+/*Aquí solo se pone opacitiy en 1 cuando pones el cursor sobre la caja del tittle...FALLO*/
+.tittle-1:hover {
+  opacity: 1;
+}
+
+/*De la siguiente manera, tanto overlay como tittle, (que son hijos de padre), se pondrán en opacity 1 cuando el cursor esté encima de todo el padre en sí*/
+.padre-1:hover > .tittle-1 { /** Esto significa que afecta al hijo tittle del padre-1*/
+  opacity: 1;
+  top: 50%;
+}
+.padre-1:hover > .overlay-1 {
+  opacity: 1;
+}
+
+/*?----------------------------------------------*/
+/*?Ejemplo 2 de un overlay sobre una foto real*/
+/*?----------------------------------------------*/
+
+.padre-2 {
+  width: 300px; /*Para que la caja del div padre-2 ocupe lo mismo que la foto y NO más...si le ponemos que ocupe menos que la foto la foto se adaptará al espacio del padre...esto es gracias al reset css que tenemos puesto*/
+  position: relative;/*Poniendo position: relative al padre conseguimos que al poner a sus hijos como position: absolute, se coloquen encima de él...si solo ponemos al hijo "position:absolute", el hijo quedará posicionado en la capa de abajo del padre y NO se verá*/
+  overflow: hidden; /*Con esto, todo lo que esté fuera del espacio padre NO se verá*/
+}
+
+.overlay-2{
+  position: absolute; /*Ponemos absolute para que overlay-2 quede por encima de su padre (QUEDA POR ENCIMA DE PADRE-2 PORQUE A padre-2 LE HEMOS PUESTO "position:relative"..si no se hubiese ido a buscar al primer position static que encontrase) hablando de capas*/
+  top: 0px; /*Sin esto la caja del overlay-2 quedaría abajo de su padre*/
+  /* border: 2px solid crimson; */
+  width: 100%; /*Así le decimos que ocupe el 100% del ancho del padre*/
+  height: 100%; /*Así le decimos que ocupe el 100% del alto del padre*/
+  background-color: rgb(0 0 255 / 0.5); /*le decimos color azul transparente de fondo*/
+  opacity: 0; /*le decimos que no se vean los cambios*/
+  transition: opacity 1s ease; /*opacity actuará como transición de 1 segundo de tipo eaase*/
+}
+
+.padre-2:hover > .overlay-2 { /*De esta forma decimos que el contenido de estas llaves se realizará sobre overlay-2 cuando se active hover en cualquier parte del padre*/
+  opacity: 1; /*hacemos visible el cambio*/
+}
+
+.tittle-2 {
+  color: gold;
+  position: absolute;
+  top: 150%; /*Mandamos un 150% hacia abajo con respecto al borde superior del padre*/
+  left: 50%; /*para centrar*/
+  transform: translate(-50%, -50%); /*para centrar*/
+  transition: top 1s ease;
+}
+
+.padre-2:hover > .tittle-2 {
+  top: 50%; /* Sobreescribimos el top anterior de 150% para mandar el titulo de vuelta al centro del padre*/
+}
+
+/*?----------------------------------------------*/
+/*?Ejemplo 3 de un overlay sobre una foto real*/
+/*?----------------------------------------------*/
+
+.padre-3 {
+  position: relative; /*para que "overlay-3" (que tiene un position:absolute) quede sobre "padre-3"*/
+  /* border: 2px solid crimson; */
+  width: 300px; /*ajustamos la caja del div padre-3 al tamaño de la foto*/
+  overflow: hidden; /*Esto oculta todo lo que haya fuera de la caja padre-3*/
+}
+
+.overlay-3 {
+  position: absolute; /*Para suporponer y mover la caja de "oerlay-3" sobre la caja "padre-3"
+  top: 0px; /*posicionamos arriba del todo*/
+  width: 100%; /*asjutamos tamaño de caja a la caja del padre*/
+  height: 100%; /*asjutamos tamaño de caja a la caja del padre*/
+  /* border: 2px solid blue; */
+  background-color: rgb(0 0 0 / 0.5); /*color negro con transparencia*/
+  opacity: 0; /*no se ve el color hasta que opacity sea 1*/
+  transition: opacity 1s ease; /*transicion de opacity en 1 segundo de tipo ease*/
+}
+
+.padre-3:hover > .overlay-3 {
+  opacity: 1; /*pasamos opacity a 1 para que se vea el cambio de color al poner el cursor sobre la caja padre (hover)*/
+}
+
+.tittle-3 {
+  width: 100px;
+  color: gold;
+  position: absolute;
+  top: 50%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+
+  transition: left 1s ease;
+}
+
+.padre-3:hover > .tittle-3 {
+  left: 50%;
+}
