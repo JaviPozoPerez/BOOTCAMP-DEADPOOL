@@ -12,6 +12,10 @@
 
 * [Página con CDNs para usar librerías externas.](https://cdnjs.com/)
 
+* [Para obtener iconos una vez añadida la liberira cdnjs o descargando](https://fontawesome.com/icons/)
+
+* [Para colores oficiales como los de facebook, twitter..etc](https://brandcolors.net/)
+
 ### Imagenes gratuitas para usar
 
 * [Unsplash](https://unsplash.com/es)

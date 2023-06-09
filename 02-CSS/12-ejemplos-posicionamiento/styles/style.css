@@ -192,3 +192,48 @@ details {
 .padre-4:hover > .tittle-4 {
   right: 50%;
 }
+
+
+/*?----------------------------------------------*/
+/*?Ejemplo de barra lateral fija*/
+/*?----------------------------------------------*/
+
+.share-box {
+  /* border: 1px solid black; */
+  border-radius: 0px 5px 5px 0px; /*para bordear esquinas*/
+  overflow: hidden; /*porque si no las cajas de los iconos salen por fuera de los bordes redondeados..y con hidden decimos que lo que sale fuera de la caja del padre no se vea*/
+  position: fixed; /*se ajusta el tamaño de la caja al contenido*/
+  width: 40px;
+  left: 0px; /*lo pegamos a la izquierda a tope*/
+  
+}
+
+.icon {
+  text-align: center;
+  color: white;
+  cursor: pointer; /*sobre los iconos el cursor se transforma en una manita*/
+  transition: transform 1s ease; /*Actua sobre la propieda transform haciendola transitar durante 1 segundo*/
+
+}
+
+.icon:hover {
+  transform: perspective(300px) rotateY(40deg); /*hace esto cuando el cursor se pone sobre los iconos*/
+}
+
+.facebook {
+  background-color: #1877f2;
+  width: 100%; /*Para ocupar el 100% de su padre*/
+  padding: 0.4rem 0.5rem;
+}
+
+.twitter {
+  background-color: #1da1f2;
+  width: 100%; /*Para ocupar el 100% de su padre*/
+  padding: 0.4rem 0.5rem;
+}
+
+.linkedin {
+  background-color: #0a66c2;
+  width: 100%; /*Para ocupar el 100% de su padre*/
+  padding: 0.4rem 0.5rem;
+}
