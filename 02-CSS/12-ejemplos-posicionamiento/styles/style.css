@@ -237,3 +237,9 @@ details {
   width: 100%; /*Para ocupar el 100% de su padre*/
   padding: 0.4rem 0.5rem;
 }
+
+.instagram {
+  background-color: #e1306c;
+  width: 100%;
+  padding: 0.4rem 0.5rem;
+}

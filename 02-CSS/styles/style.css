@@ -1,0 +1,14 @@
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 4rem auto;
+}
+
+summary > h2 {
+  display: inline-block;
+}
+
+/*?---------------------*/
+/*? FLEXBOX */
+/*?---------------------*/
+
