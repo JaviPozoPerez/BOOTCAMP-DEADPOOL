@@ -15,11 +15,15 @@ summary > h2 {
 .padre {
   border: 4px solid black;
   background-color: pink;
+  
 }
 
 .hijo {
   border: 2px solid white;
   text-align: center;
+
+  padding: 1rem;
+  /* height: 100%; */
 }
 
 .hijo:nth-child(6n-5){
@@ -36,4 +40,50 @@ summary > h2 {
 
 .hijo:nth-child(6n-2){
   background-color: blue;
+}
+
+/*!1.- Cuando ponemos al padre display: flex; todos sus hijos s ponen en fila */
+/*!2.- Los hijos pasan a tener el ancho de su contenido, salvo que les pongas un width*/
+/*!3.- Los hijos en "row" pasan de tener ancho completo y altura automática a inertilo por ancho automático y altura completa*/
+
+.padre-1 {
+  display: flex; /*pone a sus hijos en filas por defecto*/
+  height: 400px;
+
+  /**El gap es lo que más se usa*/
+  column-gap: 8rem; /*seapración entre columnas*/
+  row-gap: 2rem; /*separación entre filas */
+  gap: 1rem; /*separación en general*/
+
+  flex-direction: column; /*Pone a los hijos en columna*/
+  flex-direction: column-reverse; /*invierte el orden en columna de los hijos*/
+  flex-direction: row-reverse; /*Pone los hijos en fila pero empezando de derecha a izquierda*/
+  flex-direction: row; /*así es como salen por defecto al poner display: flex;*/
+
+  /** Para alinear las cajas (los div, los hijos..como quieras llamarlo) en el MAIN AXIS (eje principal que viene a ser como el eje x cuando es row, y el eje y cuando es column, de la caja padre...) usamos "justify-content"*/
+
+  justify-content: flex-end; /*te pone a la derecha de la caja padre a la caja de los hijos*/
+  justify-content: center; /*Centra los hijo sen la caja padre*/
+  justify-content: space-between; /*La primera caja y la última se van a los bordes y el resto se reparten el esapcio sobrante equitativamente*/
+  justify-content: space-around; /*Pone el mismo espacio a izquierda y derecha de cada caja*/
+  justify-content: space-evenly;/*Mismo esapcio entre cajas*/
+  justify-content: flex-start; /*por defecto*/
+
+  
+  /** Para alinear las cajas (los div, los hijos..como quieras llamarlo) en el CROSS AXIS (eje vertical que viene a ser como el eje y cuando es row, y el eje x cuando es column, de la caja padre...) usamos "align-items"*/
+
+  align-items: stretch; /*por defecto*/
+  align-items: baseline; /*si por ejemplo hay la base del contenido del algún hijo está a diferente altura, se alinean el resto de bases de el resto de hijos con ella*/
+  align-items: flex-start; /*se alinean con el borde superior de la caja padre*/
+  align-items: flex-end; /*se alinean con el borde inferior de la caja padre*/
+  align-items: center; /*se alinean en el centro de la caja padre*/
+
+  /** Si los hijos no caben o bien de alto o de ancho en su padre, su tamño va reduciendo, hasta el punto en que su contenido se acaba desbordando de ellos...para evitar esto están las opciones "wrap"*/
+  flex-wrap: nowrap; /*por defecto...es decir, se siguen desbordando*/
+  flex-wrap: wrap; /*si no caben de ancho por ejemplo pasan a una segunda fila, acortando el alto de sus cajas */
+
+}
+
+.hijo-2 {
+  font-size: 2rem;
 }
