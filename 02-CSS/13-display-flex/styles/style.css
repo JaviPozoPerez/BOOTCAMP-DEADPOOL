@@ -26,6 +26,7 @@ summary > h2 {
   /* height: 100%; */
 }
 
+Esto de aquí abajo es para los colores de la caja de los hijos*/
 .hijo:nth-child(6n-5){
   background-color: crimson;
 }
