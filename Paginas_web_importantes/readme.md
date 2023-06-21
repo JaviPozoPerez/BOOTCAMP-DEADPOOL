@@ -16,6 +16,8 @@
 
 * [Para colores oficiales como los de facebook, twitter..etc](https://brandcolors.net/)
 
+* [Página web que explica bien el Diplay: flex;](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
 ### Imagenes gratuitas para usar
 
 * [Unsplash](https://unsplash.com/es)

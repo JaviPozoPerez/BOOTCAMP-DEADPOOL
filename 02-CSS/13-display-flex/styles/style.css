@@ -203,3 +203,21 @@ summary > h2 {
 .padre-5 .hijo-2 {
   width: 70px;
 }
+
+
+/*?---------------------*/
+/*? Truquito con margin */
+/*?---------------------*/
+
+.padre-6 {
+  display: flex;
+  height: 300px;
+}
+
+.padre-6 .hijo-1{
+  margin-right: auto; /*crea un margen hacia la derecha, desplazando la caja del hijo-2 hasta el final*/
+}
+
+.padre-6 .hijo-2 {
+  margin-top: auto; /*Creo un margen arriba del hijo-2, empujandolo hacia abajo*/
+}
